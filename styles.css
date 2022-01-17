@@ -1,0 +1,270 @@
+/* primary:   #808080 */
+/* secondary: #e6e6e6 */
+/* yellow:    #ffd700 */
+/* pink:      #d6a4db */
+
+
+@font-face {
+   font-family: "Ubuntu";
+   src: url("./assets/Ubuntu-Regular.ttf");
+   font-weight: normal;
+   font-size: normal;
+}
+
+@font-face {
+   font-family: "Ubuntu";
+   src: url("./assets/Ubuntu-Bold.ttf");
+   font-weight: bold;
+   font-size: normal;
+}
+
+
+@keyframes background {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: -10000px 10000px;
+   }
+}
+
+
+body {
+   background-image: url("./assets/background-new-tile.png");
+   background-color: #808080;
+   background-repeat: repeat;
+   animation: "background" 1500s linear infinite;
+
+   max-width: 960px;
+   margin: auto;
+   font-family: "Ubuntu";
+}
+
+
+@media (min-width: 960px) { /* for width >960px (desktop) */ 
+   .banner {
+      width: 50%;
+      height: 50%;
+      border-radius: 10px 10px 0px 0px;
+   
+      display: block;
+      margin-top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   
+   
+   .name img {
+      margin-top: -15%;
+   
+      border-color: #e6e6e6;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 50%;
+   }
+   
+   .name h2 {
+      margin-top: -11%;
+      margin-left: 24%;
+   }
+   
+   .name {
+      background-color: #e6e6e6;
+   
+      width: 50%;
+      height: 50%;
+   
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   
+      padding: 2%;
+      box-sizing: border-box;
+   
+      font-weight: bold;
+   }
+   
+   
+   .description {
+      background-color: #e6e6e6;
+   
+      width: 50%;
+      height: 50%;
+      border-radius: 0px 0px 10px 10px;
+   
+      display: block;
+      margin-top: -5%;
+      margin-left: auto;
+      margin-right: auto;
+   
+      padding: 2%;
+      padding-bottom: 1%;
+      box-sizing: border-box;
+   }
+   
+   
+   #pronouns {
+      margin-top: -8.7%;
+      margin-left: 15%;
+   }
+
+
+   #socials img {
+      height: 36px;
+      width: 36px;
+   }
+
+
+   #socials {
+      margin-top: -11%;
+   }
+
+
+   #buttons img {
+      height: 36px;
+      width: auto;
+
+      margin-right: -4.25%;
+   }
+
+
+   #buttons {
+      margin-bottom: -12.5%;
+   }
+}
+
+
+@media (max-width: 960px) { /* for width <960px (mobile) */
+   .banner {
+      width: 100%;
+      height: 100;
+      border-radius: 10px 10px 0px 0px;
+   
+      display: block;
+      margin-top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+
+   .name img {
+      margin-top: -12.5%;
+   
+      border-color: #e6e6e6;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 50%;
+   }
+
+   .name h2 {
+      margin-top: -11%;
+      margin-left: 24%;
+   }
+
+   .name {
+      background-color: #e6e6e6;
+   
+      width: 100%;
+      height: 100%;
+   
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   
+      padding: 2%;
+      box-sizing: border-box;
+   
+      font-weight: bold;
+   }
+
+
+   .description img {
+      width: 27px;
+      height: 27px;
+   }
+
+
+   .description {
+      margin-top: -5%;
+      background-color: #e6e6e6;
+   
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 0px 10px 10px;
+   
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   
+      padding: 3%;
+      padding-bottom: 9%;
+      box-sizing: border-box;
+   }
+
+
+   #pronouns {
+      margin-top: -45px;
+      margin-left: 95px;
+   }
+
+
+   #socials img {
+      height: 32px;
+      width:  32px;
+   }
+
+
+   #socials {
+      margin-top: -10%;
+   }
+
+
+   #buttons img {
+      height: 32px;
+      width: auto;
+   }
+
+
+   #buttons {
+      margin-bottom: -20%;
+   }
+}
+
+
+.name {
+   transition: 1s;
+}
+
+
+.banner {
+   transition: 1s;
+}
+
+
+.description {
+   transition: 1s;
+}
+
+
+#socials img {
+   opacity: 1;
+   transition: 1s;
+}
+
+
+#socials img:hover {
+   opacity: .75;
+   transition: 1s;
+}
+
+
+#buttons img {
+   opacity: 1;
+   transition: 1s;
+}
+
+
+#buttons img:hover {
+   opacity: .75;
+   transition: 1s;
+}
