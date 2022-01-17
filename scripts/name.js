@@ -69,4 +69,3 @@ switch (month) {
 
 
 document.title = magicalbunny31;
-document.querySelector("meta[property=\"og:title\"]").setAttribute("content", magicalbunny31);
