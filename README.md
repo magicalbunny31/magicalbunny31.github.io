@@ -1,2 +1,2 @@
 # magicalbunny31.github.io 🔗
-github pages 📄🐾
+[v1] github pages 📄🐾
