@@ -64,6 +64,7 @@ a:hover {
 .main {
    position: relative;
    background-color: #e6e6e6;
+   max-width: 750px;
 }
 
 .empty {
@@ -147,18 +148,35 @@ a:hover {
 .buttons .corner-border {
    position: relative;
    display: inline-block;
-   padding: 0;
+   padding: 9px 0 8px 0;
    --b: 5px;
    --c: #606060;
    --w: 10px;
    border: var(--b) solid #0000;
-   --_g: #0000 90deg,var(--c) 0;
+   --_g: #0000 90deg, var(--c) 0;
    --_p: var(--w) var(--w) border-box no-repeat;
    background:
       conic-gradient(from 90deg  at top    var(--b) left  var(--b), var(--_g)) 0    0    / var(--_p),
       conic-gradient(from 180deg at top    var(--b) right var(--b), var(--_g)) 100% 0    / var(--_p),
       conic-gradient(from 0deg   at bottom var(--b) left  var(--b), var(--_g)) 0    100% / var(--_p),
       conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+}
+
+.buttons .button {
+   background-color: #e6e6e6;
+   cursor: pointer;
+   color: black;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   padding: 10px 16px;
+   display: inline;
+   border: none;
+   position: relative;
+}
+
+.buttons .button:hover {
+   filter: brightness(0.9);
 }
 
 .buttons button {
