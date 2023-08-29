@@ -12,6 +12,42 @@
    font-size: normal;
 }
 
+@-webkit-keyframes background {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: -1920px 1080px;
+   }
+}
+
+@-moz-keyframes background {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: -1920px 1080px;
+   }
+}
+
+@-ms-keyframes background {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: -1920px 1080px;
+   }
+}
+
+@-o-keyframes background {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: -1920px 1080px;
+   }
+}
+
 @keyframes background {
    from {
       background-position: 0 0;
@@ -29,7 +65,11 @@
 body {
    background-image: url("./assets/backgrounds/background.png");
    background-repeat: repeat;
-   animation: "background" 150s linear infinite;
+   -webkit-animation: background 150s linear infinite;
+   -moz-animation:    background 150s linear infinite;
+   -ms-animation:     background 150s linear infinite;
+   -o-animation:      background 150s linear infinite;
+   animation:         background 150s linear infinite;
 }
 
 h3 {
