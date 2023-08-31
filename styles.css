@@ -1,12 +1,12 @@
 @font-face {
-   src: url("./assets/fonts/Ubuntu-Regular.ttf");
+   src: url("/assets/fonts/Ubuntu-Regular.ttf");
    font-family: "Ubuntu";
    font-weight: normal;
    font-size: normal;
 }
 
 @font-face {
-   src: url("./assets/fonts/Ubuntu-Bold.ttf");
+   src: url("/assets/fonts/Ubuntu-Bold.ttf");
    font-family: "Ubuntu";
    font-weight: bold;
    font-size: normal;
@@ -63,7 +63,7 @@
 }
 
 body {
-   background-image: url("./assets/backgrounds/background.png");
+   background-image: url("/assets/backgrounds/background.png");
    background-repeat: repeat;
    -webkit-animation: background 150s linear infinite;
    -moz-animation:    background 150s linear infinite;
