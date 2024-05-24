@@ -232,3 +232,21 @@ a:hover {
 .buttons button:hover {
    filter: brightness(0.9);
 }
+
+
+.image-row {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+
+.image-column {
+   flex: 25%;
+   padding: 0 4px;
+}
+
+.image-column img, .image-column video {
+   margin-top: 8px;
+   vertical-align: middle;
+   width: 100%;
+}
