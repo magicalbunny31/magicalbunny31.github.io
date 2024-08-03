@@ -1,5 +1,0 @@
->>> https://nuzzles.dev/emoji
-
-
-https://twemoji.twitter.com
-~ Twitter (https://twitter.com)

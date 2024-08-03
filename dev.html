@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+   <head>
+
+
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+      <link rel="icon" href="/assets/emoji/mutant_standard/robot.webp" type="image/webp"/>
+      <title>dev and apps 🐾</title>
+
+      <meta name    ="theme-color"  content="#d6a4db"/>
+      <meta property="og:site_name" content="nuzzles.dev/dev"/>
+      <meta name    ="title"        content="dev and apps 🐾"/>
+      <meta name    ="description"/>
+      <meta property="og:image"/>
+
+      <meta property="og:type"  content="website"/>
+      <meta property="og:url"   content="https://nuzzles.dev/dev"/>
+      <meta name    ="language" content="en-gb"/>
+      <meta name    ="keywords"/>
+
+      <link rel="stylesheet" type="text/css" href="/styles.css"/>
+
+      <script src="/assets/script/cutie.js"></script>
+      <script src="/assets/script/footer.js"></script>
+      <script src="/assets/script/modal.js"></script>
+
+      <style>
+         .avatar {
+            border-radius: 100%;
+         }
+
+         .inline-button-emoji {
+            float: none !important;
+            height: 1.25em !important;
+         }
+
+         .archived {
+            background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("/assets/background/spoiler.gif");
+            background-size: cover;
+         }
+
+         .corner-border:has(.archived), .archived-header {
+            display: none;
+         }
+      </style>
+
+      <script>
+         window.addEventListener(`load`, () => {
+            const archived = document.querySelectorAll(`.corner-border:has(.archived), .archived-header`);
+            const viewArchivedApps = document.getElementById(`view-archived-apps`);
+            const hideArchivedApps = document.getElementById(`hide-archived-apps`);
+            viewArchivedApps.onclick = () => {
+               viewArchivedApps.style.display = `none`;
+               hideArchivedApps.style.display = `block`;
+               for (const div of archived)
+                  div.style.display = `block`;
+            };
+            hideArchivedApps.onclick = () => {
+               viewArchivedApps.style.display = `block`;
+               hideArchivedApps.style.display = `none`;
+               for (const div of archived)
+                  div.style.display = `none`;
+            };
+         });
+      </script>
+
+
+   </head>
+
+
+   <body>
+
+
+      <div class="centre">
+
+
+         <section>
+   
+   
+            <article>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h1>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/laptop.webp" alt="laptop" title=":laptop:" draggable="false"/>
+                        developer fur, at your service!
+                     </h1>
+                     <ul>
+                        <li>
+                           i have been programming in
+                           <a href="https://nodejs.org" target="_blank"><img class="emoji" src="/assets/logo/node.js.png" alt="node.js logo" title="node.js" draggable="false"/> node.js</a>
+                           and
+                           <a href="https://www.python.org" target="_blank"><img class="emoji" src="/assets/logo/python.png" alt="python logo" title="python" draggable="false"/> python</a>
+                           since 2019, primarily developing discord apps
+                        </li>
+                        <li>
+                           interested in me creating a discord app for your community or other programming project for your needs? shoot me a message on
+                           <a href="/discord" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord</a>~
+                        </li>
+                        <ul>
+                           <li>
+                              looking for my art commissions instead? please see
+                              <a href="/art"><img class="emoji" src="/assets/emoji/mutant_standard/artist_palette.webp" alt="artist palette" title=":artist_palette:" draggable="false"/> art and commissions</a>!
+                           </li>
+                        </ul>
+                        <li>
+                           other than that, i only have the odd tidbits of scripts that would probably be worthless to you..
+                        </li>
+                     </ul>
+
+                  </div>
+               </div>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h1>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/robot.webp" alt="robot" title=":robot:" draggable="false"/>
+                        discord apps
+                     </h1>
+
+                     <ul>
+                        <li>
+                           looking for the
+                           <img class="emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
+                           <strong>terms of service</strong>
+                           and
+                           <img class="emoji" src="/assets/emoji/mutant_standard/curled_page.webp" alt="curled page" title=":curled_page:" draggable="false"/>
+                           <strong>privacy policy</strong>
+                           for my apps?
+                        </li>
+                        <ul>
+                           <li>
+                              well,
+                              <em>they're different for each app!</em>
+                              ✨
+                           </li>
+                        </ul>
+                        <li>first, select the app you want to view them for</li>
+                        <ul>
+                           <li>
+                              then there'll be buttons linking to the terms/policies just
+                              <img class="emoji" src="/assets/emoji/pulexart/happ.png" alt="smiling fox" title=":happ:" draggable="false"/>
+                              <em>waiting</em>
+                              <img class="emoji" src="/assets/emoji/pulexart/happ.png" alt="smiling fox" title=":happ:" draggable="false"/>
+                              to be pressed~
+                           </li>
+                        </ul>
+                     </ul>
+
+                     <h2>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/globe.webp" alt="globe" title=":globe:" draggable="false"/>
+                        apps i've made that are public
+                     </h2>
+                     <div class="grid">
+                        <div class="corner-border" style="--border-colour: #feb139;">
+                           <a class="border large-button" href="/fox-bot" style="--border-colour: #feb139;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>fox bot 🦊</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/fox.webp" alt="fox" title=":fox:" draggable="false"/>
+                                 your discord bot for foxes~ ✨
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #c653ff;">
+                           <a class="border large-button" href="/bun" style="--border-colour: #c653ff;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>bun 🐰</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/rabbit.webp" alt="rabbit" title=":rabbit:" draggable="false"/>
+                                 a furry discord bot for everyone! ✨
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #3498db;">
+                           <a class="border large-button" href="/bun" style="--border-colour: #3498db;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/transport_handbook.webp" alt="transport handbook's avatar" title="transport handbook" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>transport handbook 🛫</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
+                                 your public transport handbook for the uk! ✨
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                     <h2>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/thought_bubble.webp" alt="thought bubble" title=":thought_bubble:" draggable="false"/>
+                        apps i've made that are private/for me only
+                     </h2>
+                     <div class="grid">
+                        <div class="corner-border" style="--border-colour: #e78522;">
+                           <a class="border large-button" href="/fox-bot" style="--border-colour: #e78522;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/fox_kit.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>fox kit 🐾</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/other/orange_paws.png" alt="orange paws" title=":orange_paws:" draggable="false"/>
+                                 bunny furfest 🐰🐾's convention security
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #ffd995;">
+                           <a class="border large-button" href="/fennec" style="--border-colour: #ffd995;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/fennec.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>fennec 💻</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/laptop.webp" alt="laptop" title=":laptop:" draggable="false"/>
+                                 the bot-for-all-bots helper~
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #fe83c6;">
+                           <a class="border large-button" href="/kettu" style="--border-colour: #fe83c6;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/kettu.webp" alt="transport handbook's avatar" title="transport handbook" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>kettu 🦊</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/other/blushy.png" alt="blushing furry" title=":blushy:" draggable="false"/>
+                                 bunny's more...."yiffy" app
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #fe83c6;">
+                           <a class="border large-button archived" href="/funny-commands-by-bunny" style="--border-colour: #fe83c6;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/funny_commands_by_bunny.webp" alt="funny commands by bunny's avatar" title="funny commands by bunny" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>funny commands by bunny 🐇</strong>
+                                 <br>
+                                 🐇 funny commands by bunny
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border large-button archived" href="/timetable-fen" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/timetable_fen.webp" alt="timetable fen's avatar" title="timetable fen" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>timetable fen 📝</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                     <h2>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/spiral_notebook.webp" alt="spiral notebook" title=":spiral_notebook:" draggable="false"/>
+                        apps i've made that are exclusively for other servers
+                     </h2>
+                     <div class="grid">
+                        <div class="corner-border" style="--border-colour: #0f87f0;">
+                           <a class="border large-button" href="/berry-bot" style="--border-colour: #0f87f0;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/berry_bot.webp" alt="berry bot's avatar" title="berry bot" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>berry bot 🫐</strong>
+                                 <br>
+                                 🫐 Gentle Berry's Server 2018-2022 🕯️
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #4de94c;">
+                           <a class="border large-button" href="/flooded-area-bot" style="--border-colour: #4de94c;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>flooded area bot 🌊</strong>
+                                 <br>
+                                 🌊 flooded area community's discord bot
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #4815aa;">
+                           <a class="border large-button" href="/halowo-levels" style="--border-colour: #4815aa;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>greg. 🦎</strong>
+                                 <br>
+                                 🦎 i greg.
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #3498db;">
+                           <a class="border large-button" href="/mintbubblex" style="--border-colour: #3498db;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>MintBubblex 🍭</strong>
+                                 <br>
+                                 🍭 verification app for Aethen's Social Area
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #3498db;">
+                           <a class="border large-button" href="/friends-smp" style="--border-colour: #3498db;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/friends_smp.webp" alt="friends smp' avatar" title="friends' smp" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>friends' smp</strong>
+                                 <br>
+                                 <img class="emoji inline-button-emoji" src="/assets/avatar/friends_smp.webp" alt="friends smp' avatar" title="friends' smp" style="border-radius: 100%;" loading="lazy" draggable="false"/>
+                                 an app representing the smp
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #401f91;">
+                           <a class="border large-button" href="/the-universe-bot" style="--border-colour: #401f91;" draggable="false">
+                              <div>
+                                 <strong>the universe bot 🌌</strong>
+                                 <br>
+                                 🌌 universe laboratories' discord bot
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #4de94c;">
+                           <a class="border large-button archived" href="/shadows-community-bot" style="--border-colour: #4de94c;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/shadows_community_bot.webp" alt="Shadow's Community Bot's avatar" title="Shadow's Community Bot" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>Shadow's Community Bot</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #43c4cd;">
+                           <a class="border large-button archived" href="/bun" style="--border-colour: #43c4cd;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/transport_handbook.webp" alt="aviflight558's avatar" title="aviflight558" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>aviflight558</strong>
+                                 <br>
+                                 ✈️ awesome discord plane bot
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #003eff;">
+                           <a class="border large-button archived" href="/the-lobster-bot" style="--border-colour: #003eff;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/the_lobster_bot.webp" alt="The Lobster Bot's avatar" title="The Lobster Bot" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>The Lobster Bot</strong>
+                                 <br>
+                                 🦞 awesome custom bot for Mighty Lobster [OFFICIAL]
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #c653ff;">
+                           <a class="border large-button archived" href="/king-doge" style="--border-colour: #c653ff;" draggable="false">
+                              <div>
+                                 <strong>king doge</strong>
+                                 <br>
+                                 🪙
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                     <h2 class="archived-header">
+                        <img class="emoji" src="/assets/emoji/mutant_standard/speech_bubble_left.webp" alt="speech bubble left" title=":speech_bubble_left:" draggable="false"/>
+                        apps i've had some say in during their development
+                     </h2>
+                     <div class="grid">
+                        <div class="corner-border" style="--border-colour: #ff0000;">
+                           <a class="border large-button archived" href="https://outcast.outcastcorp.xyz" style="--border-colour: #ff0000;" target="_blank" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/outcast.webp" alt="Outcast's avatar" title="Outcast" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>Outcast</strong>
+                                 <br>
+                                 An all-in-one Discord bot.
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #c653ff;">
+                           <a class="border large-button archived" href="/farids-cafe" style="--border-colour: #c653ff;" draggable="false">
+                              <img class="emoji avatar" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>farid's cafe</strong>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                     <p style="font-size: 0.75em; margin-top: 0.75em;">
+                        <a id="view-archived-apps" style="color: #606060; cursor: pointer;">
+                           view archived apps..
+                        </a>
+                        <a id="hide-archived-apps" style="color: #606060; cursor: pointer; display: none;">
+                           hide archived apps..
+                        </a>
+                     </p>
+
+                  </div>
+               </div>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h1>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/package.webp" alt="package" title=":package:" draggable="false"/>
+                        packages
+                     </h1>
+
+                     <div class="grid">
+                        <div class="corner-border">
+                           <a class="border large-button" href="https://github.com/magicalbunny31/awesome-utility-stuff" target="_blank" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/package.webp" alt="package" title=":package:" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>@magicalbunny31/awesome-utility-stuff</strong>
+                                 <br>
+                                 🐾some awesome utilities that i pretty much need or else my code will suck
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border large-button" href="https://github.com/magicalbunny31/fennec-utilities" target="_blank" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/package.webp" alt="package" title=":package:" loading="lazy" draggable="false"/>
+                              <div>
+                                 <strong>@magicalbunny31/fennec-utilities</strong>
+                                 <br>
+                                 💻 utility package for interacting with fennec
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h1>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/globe.webp" alt="globe" title=":globe:" draggable="false"/>
+                        other places to find my code
+                     </h1>
+
+                     <div class="grid">
+                        <div class="corner-border" style="--border-colour: #f26207;">
+                           <a class="border large-button more-socials" href="https://replit.com/@magicalbunny31" target="_blank" style="--border-colour: #f26207;" draggable="false">
+                              <img class="emoji" src="/assets/logo/replit.png" alt="replit logo" title="replit" draggable="false"/>
+                              <div>
+                                 <strong>replit</strong>
+                                 <br>
+                                 magicalbunny31
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #f26207;">
+                           <a class="border large-button" href="https://replit.com/@jaxbun" target="_blank" style="--border-colour: #f26207;" draggable="false">
+                              <img class="emoji" src="/assets/logo/replit.png" alt="replit logo" title="replit" draggable="false"/>
+                              <div>
+                                 <strong>replit</strong>
+                                 <br>
+                                 jaxbun
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #171515;">
+                           <a class="border large-button" href="https://gist.github.com/magicalbunny31" target="_blank" style="--border-colour: #171515;" draggable="false">
+                              <img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/>
+                              <div>
+                                 <strong>github gist</strong>
+                                 <br>
+                                 magicalbunny31
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #6449f2;">
+                           <a class="border large-button" href="https://glitch.com/@magicalbunny31" target="_blank" style="--border-colour: #6449f2;" draggable="false">
+                              <img class="emoji" src="/assets/logo/glitch.png" alt="glitch logo" title="glitch" draggable="false"/>
+                              <div>
+                                 <strong>glitch</strong>
+                                 <br>
+                                 magicalbunny31
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+
+            </article>
+         
+
+            <nav>
+
+
+               <div class="large-corner-border navigator">
+                  <div class="large-border box">
+
+                     <div class="list">
+                        <div class="corner-border">
+                           <a class="border button" href="/" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/world_map.webp" alt="world map" title=":world_map:" draggable="false"/>
+                              <strong>homepage</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" href="/about" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/sparkles.webp" alt="sparkles" title=":sparkles:" draggable="false"/>
+                              <strong>what's a bunny?</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button disabled" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/robot.webp" alt="robot" title=":robot:" draggable="false"/>
+                              <em><strong>dev and apps</strong></em> ✨
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" href="/art" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/artist_palette.webp" alt="artist palette" title=":artist_palette:" draggable="false"/>
+                              <strong>art and commissions</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" href="/tools" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/wrench.webp" alt="wrench" title=":wrench:" draggable="false"/>
+                              <strong>tools</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" href="https://t.me/bundailyfox" target="_blank" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/fox.webp" alt="fox" title=":fox:" draggable="false"/>
+                              <strong>bun's daily fox</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" href="/deerie" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/deer_with_antlers.webp" alt="deer with antlers" title=":deer_with_antlers:" draggable="false"/>
+                              <strong>become deer</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" id="cutie" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/no.webp" alt="no entry" title=":no:" draggable="false"/>
+                              <strong>don't click this ,,</strong>
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+            </nav>
+
+
+         </section>
+
+
+         <footer>
+
+
+            <div class="large-corner-border">
+               <div class="large-border box">
+
+
+                  <div class="info">
+                     <p>
+                        <a class="footer-item" id="splash"></a>
+                        <br>
+                        <a class="footer-item modal-button" id="info">info</a>
+                        |
+                        <a class="footer-item modal-button" id="attribution">attribution</a>
+                        |
+                        <a class="footer-item" id="page-sauce" target="_blank">page sauce</a>
+                        |
+                        🐰🦊🐺🦌
+                     </p>
+                  </div>
+
+
+               </div>
+            </div>
+
+
+         </footer>
+
+
+      </div>
+
+
+      <div class="modal-background">
+         <div class="modal">
+
+            <div class="large-corner-border">
+               <div class="large-border box">
+
+                  <span id="modal-content">
+                     
+                  </span>
+
+                  <div class="grid">
+                     <div class="corner-border" style="--border-colour: #f60000;">
+                        <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
+                           <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
+                           <div>
+                              <strong>close modal</strong>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+   
+         </div>
+      </div>
+
+
+   </body>
+
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+   <head>
+
+
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+      <link rel="icon" href="/assets/emoji/mutant_standard/world_map.webp" type="image/webp"/>
+      <title>fe2 🐾</title>
+
+      <meta name    ="theme-color"  content="#feb139"/>
+      <meta property="og:site_name" content="nuzzles.dev/fe2"/>
+      <meta name    ="title"        content="fe2 🐾"/>
+      <meta name    ="description"/>
+      <meta property="og:image"     content="https://nuzzles.dev/assets/avatar/fox_bot.webp"/>
+
+      <meta property="og:type"  content="website"/>
+      <meta property="og:url"   content="https://nuzzles.dev/fe2"/>
+      <meta name    ="language" content="en-gb"/>
+      <meta name    ="keywords" content="fox bot"/>
+
+      <link rel="stylesheet" type="text/css" href="/styles.css"/>
+
+      <script src="/assets/script/cutie.js"></script>
+      <script src="/assets/script/footer.js"></script>
+      <script src="/assets/script/modal.js"></script>
+
+      <style>
+         .info-card h1 {
+            color: white;
+            margin: 0;
+            -webkit-text-stroke: 0.05em black;
+         }
+
+         .info-card li {
+            color: white;
+            font-size: 1.25em;
+            font-weight: bold;
+            margin: 0;
+            -webkit-text-stroke: 0.025em black;
+         }
+
+         .info-card {
+            background-image: var(--background-image);
+            background-position: 50%;
+            background-size: cover;
+            border: none;
+            height: 100%;
+            padding: 0.5em;
+            width: 100%;
+         }
+
+         .info-card > .hidden-content {
+            display: none;
+         }
+
+         .info-card:hover > .hidden-content {
+            display: block;
+         }
+
+         .media-corner-border:has(.youtube-video) {
+            float: right;
+            margin-top: -3em;
+         }
+
+         @media only screen and (max-width: 750px) {
+            .media-corner-border:has(.youtube-video) {
+               float: none !important;
+               margin-bottom: 1em;
+               margin-top: 0 !important;
+            }
+         }
+      </style>
+
+      <script>
+         window.addEventListener(`load`, () => {
+            const hash = window.location.hash.slice(1);
+            const buttonId = [ `normal`, `hard`, `insane`, `crazy`, `crazy+`, `community-maps` ].includes(hash)
+               ? hash
+               : `easy`;
+
+            const button = document.getElementById(buttonId);
+            button.classList.add(`disabled`);
+
+            const buttonText = button.querySelector(`div`);
+            buttonText.innerHTML = `<em>${buttonText.innerHTML}</em>`;
+
+            const [ content ] = document.getElementsByClassName(`tab-content`);
+            for (const child of content.querySelectorAll(`div.content`))
+               child.style.display = `none`;
+
+            const buttonContent = document.getElementById(`${buttonId}-content`);
+            buttonContent.style.display = `block`;
+         });
+
+         window.addEventListener(`hashchange`, hashChangeEvent => {
+            const oldHash = hashChangeEvent.oldURL.split(`#`).at(-1);
+            const oldButtonId = [ `normal`, `hard`, `insane`, `crazy`, `crazy+`, `community-maps` ].includes(oldHash)
+               ? oldHash
+               : `easy`;
+
+            const oldButton = document.getElementById(oldButtonId);
+            oldButton.classList.remove(`disabled`);
+
+            const oldButtonText = oldButton.querySelector(`div`);
+            oldButtonText.innerHTML = `<strong>${oldButtonText.innerText}</strong>`;
+
+            const newHash = hashChangeEvent.newURL.split(`#`).at(-1);
+            const newButtonId = [ `normal`, `hard`, `insane`, `crazy`, `crazy+`, `community-maps` ].includes(newHash)
+               ? newHash
+               : `easy`;
+
+            const newButton = document.getElementById(newButtonId);
+            newButton.classList.add(`disabled`);
+
+            const newButtonText = newButton.querySelector(`div`);
+            newButtonText.innerHTML = `<em>${newButtonText.innerHTML}</em>`;
+
+            const [ content ] = document.getElementsByClassName(`tab-content`);
+            for (const child of content.querySelectorAll(`div.content`))
+               child.style.display = `none`;
+
+            const buttonContent = document.getElementById(`${newButtonId}-content`);
+            buttonContent.style.display = `block`;
+         });
+      </script>
+
+
+   </head>
+
+
+   <body>
+
+
+      <div class="centre">
+
+
+         <section>
+   
+   
+            <article>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h1>
+                        <img class="emoji" src="/assets/logo/fe2.webp" alt="Flood Escape 2 logo" title="FE2" draggable="false"/>
+                        bunny's fe2 video tracker
+                     </h1>
+                     <ul>
+                        <li>
+                           this place tracks
+                           <a href="/youtube" target="_blank"><img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/> @magicalbunny31</a>'s
+                           status on their completion of the fe2 maps!
+                        </li>
+                     </ul>
+
+                     <div class="grid">
+                        <div class="corner-border" style="--border-colour: #FF0000;">
+                           <a class="border large-button" href="/youtube" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                              <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                              <div>
+                                 <strong>youtube</strong>
+                                 <br>
+                                 @magicalbunny31
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border" style="--border-colour: #180081;">
+                           <a class="border large-button" href="https://flood-escape-2.fandom.com/wiki/Flood_Escape_2_Wiki" target="_blank" style="--border-colour: #180081;" draggable="false">
+                              <img class="emoji" src="/assets/logo/fe2.webp" alt="Flood Escape 2 logo" title="FE2" draggable="false"/>
+                              <div>
+                                 <strong>Flood Escape 2 Wiki</strong>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box" style="display: grid;">
+
+                     <div class="tab-heading">
+                        <div class="corner-border tab-item" style="--border-colour: #55FF7F;">
+                           <a class="border button" id="easy" href="#easy" style="--border-colour: #55FF7F; --disabled-colour: #008020" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>easy</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border tab-item" style="--border-colour: #FFFF7F;">
+                           <a class="border button" id="normal" href="#normal" style="--border-colour: #FFFF7F; --disabled-colour: #808000;" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>normal</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border tab-item" style="--border-colour: #FF557F;">
+                           <a class="border button" id="hard" href="#hard" style="--border-colour: #FF557F; --disabled-colour: #800020;" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>hard</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border tab-item" style="--border-colour: #AA55FF;">
+                           <a class="border button" id="insane" href="#insane" style="--border-colour: #AA55FF; --disabled-colour: #400080;" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>insane</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border tab-item" style="--border-colour: #E67E22;">
+                           <a class="border button shake" id="crazy" href="#crazy" style="--border-colour: #E67E22; --disabled-colour: #733c0d;" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>crazy</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border tab-item" style="--border-colour: #D35400;">
+                           <a class="border button shake-more" id="crazy+" href="#crazy+" style="--border-colour: #D35400; --disabled-colour: #803300;" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>crazy+</strong>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border tab-item" style="--border-colour: #808080;">
+                           <a class="border button" id="community-maps" href="#community-maps" style="--border-colour: #808080; --disabled-colour: #404040;" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/open_folder.webp" alt="open folder" title=":open_folder:" draggable="false"/>
+                              <div>
+                                 <strong>community maps</strong>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                     <hr/>
+
+                     <div class="tab-content">
+
+                        <div class="content" id="easy-content">
+
+                           <div class="list">
+                              <div class="corner-border">
+                                 <div class="border info-card" style="--background-image: url('https://files.catbox.moe/0jt41c.webp')">
+                                    <h1>castle tides 🏰🌉🌊</h1>
+                                    <div class="hidden-content">
+                                       <div class="media-corner-border">
+                                          <iframe class="border youtube-video" src="https://www.youtube-nocookie.com/embed/cHEaiJwzPm4?si=Zobrhyc13AVlGfCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                       </div>
+                                       <ul>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             recorded, edited, and published
+                                          </li>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             pending re-record
+                                          </li>
+                                       </ul>
+                                       <div class="grid">
+                                          <div class="corner-border" style="--border-colour: #180081;">
+                                             <a class="border large-button" href="https://flood-escape-2.fandom.com/wiki/Castle_Tides" target="_blank" style="--border-colour: #180081;" draggable="false">
+                                                <img class="emoji" src="/assets/logo/fe2.webp" alt="Flood Escape 2 logo" title="FE2" draggable="false"/>
+                                                <div>
+                                                   <strong>Flood Escape 2 Wiki</strong>
+                                                   <br/>
+                                                   Castle Tides
+                                                </div>
+                                             </a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="corner-border">
+                                 <div class="border info-card" style="--background-image: url('https://files.catbox.moe/8pzln5.webp')">
+                                    <h1>outlier of a coppice carcass 🏗️🏭🪵</h1>
+                                    <div class="hidden-content">
+                                       <div class="media-corner-border">
+                                          <iframe class="border youtube-video" src="https://www.youtube-nocookie.com/embed/M4XeSedPPAU?si=F89Sn7OV_4ufllzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                       </div>
+                                       <ul>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             recorded, edited, and published
+                                          </li>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             pending re-record
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="corner-border">
+                                 <div class="border info-card" style="--background-image: url('https://files.catbox.moe/ipthlz.webp')">
+                                    <h1>closing hours 🏪🛍️🌃</h1>
+                                    <div class="hidden-content">
+                                       <ul>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             can solo map
+                                          </li>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/cross.webp" alt="no" title=":cross:" draggable="false"/>
+                                             recorded, edited, and published
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="corner-border">
+                                 <div class="border info-card" style="--background-image: url('https://files.catbox.moe/65n944.webp')">
+                                    <h1>moonlight forest 🌕🛖🌲</h1>
+                                    <div class="hidden-content">
+                                       <ul>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             can solo map
+                                          </li>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/cross.webp" alt="no" title=":cross:" draggable="false"/>
+                                             recorded, edited, and published
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="corner-border">
+                                 <div class="border info-card" style="--background-image: url('https://files.catbox.moe/o6r6vr.webp')">
+                                    <h1>axiom 🔮📦🟦</h1>
+                                    <div class="hidden-content">
+                                       <div class="media-corner-border">
+                                          <iframe class="border youtube-video" src="https://www.youtube-nocookie.com/embed/EOxiPr_jN7I?si=pCGRmMMDIoC37IaD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                       </div>
+                                       <ul>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             recorded, edited, and published
+                                          </li>
+                                          <li>
+                                             <img class="emoji" src="/assets/emoji/mutant_standard/green_tick.webp" alt="yes" title=":green_tick:" draggable="false"/>
+                                             pending re-record
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="list" style="margin-top: 1em;">
+                              <div class="corner-border" style="--border-colour: #FF0000;">
+                                 <a class="border large-button" href="https://www.youtube.com/playlist?list=PL5h9bAV_k0qP0Bti9PSR-8bvYK_jIVG5K" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                                    <div>
+                                       <strong>youtube playlist</strong>
+                                       <br>
+                                       🗺️ fe2 [easy]
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+
+                        </div>
+
+                        <div class="content" id="normal-content">
+                           normal
+
+                           <div class="list" style="margin-top: 1em;">
+                              <div class="corner-border" style="--border-colour: #FF0000;">
+                                 <a class="border large-button" href="https://www.youtube.com/playlist?list=PL5h9bAV_k0qNgF_meP9TVFoiVZDb72Ch1" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                                    <div>
+                                       <strong>youtube playlist</strong>
+                                       <br>
+                                       🗺️ fe2 [normal]
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="content" id="hard-content">
+                           hard
+
+                           <div class="list" style="margin-top: 1em;">
+                              <div class="corner-border" style="--border-colour: #FF0000;">
+                                 <a class="border large-button" href="https://www.youtube.com/playlist?list=PL5h9bAV_k0qPoHbhEXoS4Hx03FJXviFAj" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                                    <div>
+                                       <strong>youtube playlist</strong>
+                                       <br>
+                                       🗺️ fe2 [hard]
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="content" id="insane-content">
+                           insane
+
+                           <div class="list" style="margin-top: 1em;">
+                              <div class="corner-border" style="--border-colour: #FF0000;">
+                                 <a class="border large-button" href="https://www.youtube.com/playlist?list=PL5h9bAV_k0qNNl40wPK3v-4gumNYJmrHd" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                                    <div>
+                                       <strong>youtube playlist</strong>
+                                       <br>
+                                       🗺️ fe2 [insane]
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="content" id="crazy-content">
+                           crazy
+
+                           <div class="list" style="margin-top: 1em;">
+                              <div class="corner-border" style="--border-colour: #FF0000;">
+                                 <a class="border large-button" href="https://www.youtube.com/playlist?list=PL5h9bAV_k0qMTtSS0NiznpWavujPoPSwc" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                                    <div>
+                                       <strong>youtube playlist</strong>
+                                       <br>
+                                       🗺️ fe2 [crazy]
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="content" id="crazy+-content">
+                           crazy+
+
+                           <div class="list" style="margin-top: 1em;">
+                              <div class="corner-border" style="--border-colour: #FF0000;">
+                                 <a class="border large-button" href="https://www.youtube.com/playlist?list=PL5h9bAV_k0qOB-7F8y2PfvdD0MxUOsG7h" target="_blank" style="--border-colour: #FF0000;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/youtube.png" alt="youtube logo" title="youtube" draggable="false"/>
+                                    <div>
+                                       <strong>youtube playlist</strong>
+                                       <br>
+                                       🗺️ fe2 [crazy+]
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="content" id="community-maps-content">
+                           community-maps
+                        </div>
+
+                        <p style="font-size: 0.75em; margin-top: 0.75em;">
+                           map images displayed are courtesy of the
+                           <a href="https://flood-escape-2.fandom.com/wiki/Flood_Escape_2_Wiki" target="_blank"><img class="emoji" src="/assets/logo/fe2.webp" alt="Flood Escape 2 logo" title="FE2" draggable="false"/> Flood Escape 2 Wiki</a>
+                           under
+                           <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>~
+                           <br/>
+                           <a href="https://www.roblox.com/games/738339342/Flood-Escape-2" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> Flood Escape 2</a>
+                           <strong>© Crazyblox Games 2017 - 2024</strong>
+                        </p>
+
+                     </div>
+
+                  </div>
+               </div>
+
+
+            </article>
+         
+
+            <nav>
+
+
+               <div class="large-corner-border navigator">
+                  <div class="large-border box">
+
+                     <div class="list">
+                        <div class="corner-border">
+                           <a class="border button" href="/" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/world_map.webp" alt="world map" title=":world_map:" draggable="false"/>
+                              <strong>homepage</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button" href="/tools" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/wrench.webp" alt="wrench" title=":wrench:" draggable="false"/>
+                              <strong>tools</strong>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border button disabled" draggable="false">
+                              <img class="emoji" src="/assets/logo/fe2.webp" alt="Flood Escape 2 logo" title="FE2" draggable="false"/>
+                              <em><strong>fe2</strong></em> ✨
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+
+            </nav>
+
+
+         </section>
+
+
+         <footer>
+
+
+            <div class="large-corner-border">
+               <div class="large-border box">
+
+
+                  <div class="info">
+                     <p>
+                        <a class="footer-item" id="splash"></a>
+                        <br>
+                        <a class="footer-item modal-button" id="info">info</a>
+                        |
+                        <a class="footer-item modal-button" id="attribution">attribution</a>
+                        |
+                        <a class="footer-item" id="page-sauce" target="_blank">page sauce</a>
+                        |
+                        🐰🦊🐺🦌
+                     </p>
+                  </div>
+
+
+               </div>
+            </div>
+
+
+         </footer>
+
+
+      </div>
+
+
+      <div class="modal-background">
+         <div class="modal">
+
+            <div class="large-corner-border">
+               <div class="large-border box">
+
+                  <span id="modal-content">
+                     
+                  </span>
+
+                  <div class="grid">
+                     <div class="corner-border" style="--border-colour: #f60000;">
+                        <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
+                           <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
+                           <div>
+                              <strong>close modal</strong>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+   
+         </div>
+      </div>
+
+
+   </body>
+
+
+</html>
