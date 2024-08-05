@@ -1506,7 +1506,8 @@ window.addEventListener(`load`, () => {
       `HOW DO YOU LET 'EM HIT US WITH THE UNO REVERSE CARD??????`,
       `uwaaaa uwuuuu aaaa`,
       `to get blown up by a mine, you must first choose to walk through a minefield`,
-      `never meet your heroes`
+      `never meet your heroes`,
+      `STOP STOP STOP STOP YOU SAID KEEP GOING WHAT I SAID STOP YOU SAID KEEP GOING WHAT THE FUCK DUDE`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
