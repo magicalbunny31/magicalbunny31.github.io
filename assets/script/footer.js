@@ -1513,7 +1513,7 @@ window.addEventListener(`load`, () => {
    const [ text ] = texts.sort(() => .5 - Math.random());
 
    const splash = document.getElementById(`splash`);
-   splash.innerText = text
+   splash.innerText = text;
 
 
    // changes the text on the footer of pages using splash text on click

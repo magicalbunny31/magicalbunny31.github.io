@@ -1,35 +1,34 @@
 window.addEventListener(`load`, async () => {
    // insert the modal at the end of the html's body code
-   const modalCode = `
-      <div id="modal-background">
-         <div id="modal">
+   const modalObject = document.createElement(`div`);
+   modalObject.id = `modal-background`;
+   modalObject.innerHTML = `
+      <div id="modal">
+         <div class="large-corner-border">
+            <div class="large-border box">
 
-            <div class="large-corner-border">
-               <div class="large-border box">
+               <span id="modal-content">
+                  
+               </span>
 
-                  <span id="modal-content">
-                     
-                  </span>
-
-                  <div class="grid">
-                     <div class="corner-border" style="--border-colour: #f60000;">
-                        <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
-                           <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
-                           <div>
-                              <strong>close modal</strong>
-                           </div>
-                        </a>
-                     </div>
+               <div class="grid">
+                  <div class="corner-border" style="--border-colour: #f60000;">
+                     <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
+                        <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
+                        <div>
+                           <strong>close modal</strong>
+                        </div>
+                     </a>
                   </div>
-
                </div>
+
             </div>
-   
          </div>
+
       </div>
    `;
 
-   document.body.innerHTML += modalCode;
+   document.body.appendChild(modalObject);
 
 
    // api requests for the modal content
