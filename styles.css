@@ -452,7 +452,7 @@ footer {
 
 /* modal */
 
-.modal-background {
+#modal-background {
    background: hsla(0, 0%, 0%, 0.5);
    bottom: 0;
    display: none;
@@ -463,7 +463,7 @@ footer {
    z-index: 2;
 }
 
-.modal {
+#modal {
    display: block;
    bottom: 5%;
    left: 0;
@@ -476,11 +476,11 @@ footer {
    z-index: 2;
 }
 
-.modal .box-border {
+#modal .box-border {
    margin-bottom: 0;
 }
 
-.modal .grid:has(#close-modal) {
+#modal .grid:has(#close-modal) {
    grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
@@ -564,7 +564,7 @@ a img {
       order: 621
    }
 
-   .modal {
+   #modal {
       bottom: 0;
       padding: 0 !important;
       top: 0;

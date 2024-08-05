@@ -1,4 +1,37 @@
 window.addEventListener(`load`, async () => {
+   // insert the modal at the end of the html's body code
+   const modalCode = `
+      <div id="modal-background">
+         <div id="modal">
+
+            <div class="large-corner-border">
+               <div class="large-border box">
+
+                  <span id="modal-content">
+                     
+                  </span>
+
+                  <div class="grid">
+                     <div class="corner-border" style="--border-colour: #f60000;">
+                        <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
+                           <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
+                           <div>
+                              <strong>close modal</strong>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+   
+         </div>
+      </div>
+   `;
+
+   document.body.innerHTML += modalCode;
+
+
    // api requests for the modal content
    const file = window.location.pathname.split(`/`).pop() || `index`;
    const filename = file.endsWith(`.html`)
@@ -132,9 +165,9 @@ window.addEventListener(`load`, async () => {
          </li>
          <li>
             <code>examples</code>
-            <img class="emoji" src="/assets/emoji/twemoji/flag_gb.png"      alt="flag of the United Kingdom" title=":flag_gb:"      draggable="false"/>
-            <img class="emoji" src="/assets/emoji/twemoji/flag_ph.png"      alt="flag of the Philippines"    title=":flag_ph:"      draggable="false"/>
-            <img class="emoji" src="/assets/emoji/twemoji/rainbow_flag.png" alt="rainbow pride flag"         title=":rainbow_flag:" draggable="false"/>
+            <img class="emoji" src="/assets/emoji/twemoji/flag_gb.webp"      alt="flag of the United Kingdom" title=":flag_gb:"      draggable="false"/>
+            <img class="emoji" src="/assets/emoji/twemoji/flag_ph.webp"      alt="flag of the Philippines"    title=":flag_ph:"      draggable="false"/>
+            <img class="emoji" src="/assets/emoji/twemoji/rainbow_flag.webp" alt="rainbow pride flag"         title=":rainbow_flag:" draggable="false"/>
          </li>
          <li>
             <code>source</code> <a href="https://github.com/jdecked/twemoji" target="_blank">https://github.com/jdecked/twemoji</a>
@@ -144,7 +177,7 @@ window.addEventListener(`load`, async () => {
 
 
    // when the modal's open button is pressed, open the modal and load the correct content
-   const [ modalBackground ] = document.getElementsByClassName(`modal-background`);
+   const modalBackground = document.getElementById(`modal-background`);
    const modalContent = document.getElementById(`modal-content`);
 
    const openModalButtons = document.getElementsByClassName(`modal-button`);
@@ -171,7 +204,7 @@ window.addEventListener(`load`, async () => {
 
 
    // when the user clicks out of the modal, close the modal
-   const [ modal ] = document.getElementsByClassName(`modal`);
+   const modal = document.getElementById(`modal`);
    window.onclick = event => {
       if (event.target == modal)
          modalBackground.style.display = `none`;
