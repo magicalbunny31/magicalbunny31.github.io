@@ -166,7 +166,7 @@ code {
    padding: 0 0.2em;
 }
 
-.corner-border:has(> .button:hover), .corner-border:has(> .large-button:hover) {
+.corner-border:has(> .button:hover), .corner-border:has(> .large-button:hover), .media-corner-border:has(> a:hover) {
    scale: 110%;
    filter: brightness(90%);
 }
