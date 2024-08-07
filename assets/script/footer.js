@@ -1507,7 +1507,11 @@ window.addEventListener(`load`, () => {
       `uwaaaa uwuuuu aaaa`,
       `to get blown up by a mine, you must first choose to walk through a minefield`,
       `never meet your heroes`,
-      `STOP STOP STOP STOP YOU SAID KEEP GOING WHAT I SAID STOP YOU SAID KEEP GOING WHAT THE FUCK DUDE`
+      `STOP STOP STOP STOP YOU SAID KEEP GOING WHAT I SAID STOP YOU SAID KEEP GOING WHAT THE FUCK DUDE`,
+      `you're a power bottom at rock bottom`,
+      `We are sorry that the, 12:01, Service, to, London Waterloo, has been further by, 15, hours.`,
+      `i don't know if you need me, but i need you`,
+      `no thoughts, only paws, paws, paws, and more paws.......`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
