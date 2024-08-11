@@ -1511,7 +1511,8 @@ window.addEventListener(`load`, () => {
       `you're a power bottom at rock bottom`,
       `We are sorry that the, 12:01, Service, to, London Waterloo, has been further by, 15, hours.`,
       `i don't know if you need me, but i need you`,
-      `no thoughts, only paws, paws, paws, and more paws.......`
+      `no thoughts, only paws, paws, paws, and more paws.......`,
+      `please be kind to your google protogen`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
