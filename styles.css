@@ -432,7 +432,6 @@ footer {
    bottom: 5%;
    left: 0;
    margin: auto;
-   overflow: scroll;
    padding: 0 25%;
    position: fixed;
    right: 0;
@@ -442,6 +441,13 @@ footer {
 
 #modal .box-border {
    margin-bottom: 0;
+}
+
+#modal-content {
+   display: inline-block;
+   max-height: 75vh;
+   overflow: scroll;
+   width: 100%;
 }
 
 #modal .grid:has(#close-modal) {
@@ -532,5 +538,13 @@ a img {
       bottom: 0;
       padding: 0 !important;
       top: 0;
+   }
+
+   #modal > .large-corner-border, #modal > .large-corner-border > .large-border {
+      height: 100% !important;
+   }
+
+   #modal-content {
+      max-height: 88.5% !important;
    }
 }
