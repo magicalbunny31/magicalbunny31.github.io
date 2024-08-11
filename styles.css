@@ -48,7 +48,6 @@
 body {
    -webkit-animation: background 33s linear infinite;
    -moz-animation: background 33s linear infinite;
-   -ms-animation: background 33s linear infinite;
    -o-animation: background 33s linear infinite;
    animation: background 33s linear infinite;
    background-image: url("/assets/background/background.png");
