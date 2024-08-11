@@ -108,42 +108,6 @@ h3 {
 
 
 
-/* shake */
-
-@keyframes shake {
-   0%   { transform: translate( 1px,  1px); }
-   10%  { transform: translate(-1px, -2px); }
-   20%  { transform: translate(-3px,  0px); }
-   30%  { transform: translate( 3px,  2px); }
-   40%  { transform: translate( 1px, -1px); }
-   50%  { transform: translate(-1px,  2px); }
-   60%  { transform: translate(-3px,  1px); }
-   70%  { transform: translate( 3px,  1px); }
-   80%  { transform: translate(-1px, -1px); }
-   90%  { transform: translate( 1px,  2px); }
-   100% { transform: translate( 1px, -2px); }
-}
-
-.shake:hover {
-   -webkit-animation: shake 0.4s;
-   -moz-animation: shake 0.4s;
-   -ms-animation: shake 0.4s;
-   -o-animation: shake 0.4s;
-   animation: shake 0.4s;
-   animation-iteration-count: infinite; 
-}
-
-.shake-more:hover {
-   -webkit-animation: shake 0.2s;
-   -moz-animation: shake 0.2s;
-   -ms-animation: shake 0.2s;
-   -o-animation: shake 0.2s;
-   animation: shake 0.2s;
-   animation-iteration-count: infinite; 
-}
-
-
-
 /* text */
 
 p {
@@ -178,6 +142,26 @@ a:link:not(.button, .large-button, .footer-item), a:visited:not(.button, .large-
 
 a:hover:not(.button, .large-button, .footer-item) {
    text-decoration: underline;
+}
+
+
+
+/* scroll anchors */
+
+html {
+   scroll-behavior: smooth;
+}
+
+a.scroll-anchor > * {
+   color: black;
+}
+
+a.scroll-anchor:hover {
+   text-decoration: none;
+}
+
+a.scroll-anchor:focus {
+   outline: none;
 }
 
 
