@@ -42,13 +42,153 @@
             flex: 25%;
             gap: 0.2em;
          }
+
+         @-webkit-keyframes spin {
+            0%   { transform: rotate(  0deg); }
+            100% { transform: rotate(360deg); }
+         }
+         
+         @-moz-keyframes spin {
+            0%   { transform: rotate(  0deg); }
+            100% { transform: rotate(360deg); }
+         }
+
+         @-o-keyframes spin {
+            0%   { transform: rotate(  0deg); }
+            100% { transform: rotate(360deg); }
+         }
+
+         @keyframes spin {
+            0%   { transform: rotate(  0deg); }
+            100% { transform: rotate(360deg); }
+         }
+
+         @-webkit-keyframes scale {
+            0%   { scale: 1; }
+            50%  { scale: 1.5; }
+            100% { scale: 1; }
+         }
+
+         @-moz-keyframes scale {
+            0%   { scale: 1; }
+            50%  { scale: 1.5; }
+            100% { scale: 1; }
+         }
+
+         @-o-keyframes scale {
+            0%   { scale: 1; }
+            50%  { scale: 1.5; }
+            100% { scale: 1; }
+         }
+
+         @keyframes scale {
+            0%   { scale: 1; }
+            50%  { scale: 1.5; }
+            100% { scale: 1; }
+         }
+         
+         @-webkit-keyframes fade {
+            0%   { opacity:  0%; }
+            100% { opacity: 75%; }
+         }
+         
+         @-moz-keyframes fade {
+            0%   { opacity:  0%; }
+            100% { opacity: 75%; }
+         }
+         
+         @-o-keyframes fade {
+            0%   { opacity:  0%; }
+            100% { opacity: 75%; }
+         }
+         
+         @keyframes fade {
+            0%   { opacity:  0%; }
+            100% { opacity: 75%; }
+         }
+
+         @-webkit-keyframes move {
+            0%   { top: 49%; left: 51%; }
+            50%  { top: 51%; left: 49%; }
+            100% { top: 49%; left: 51%; }
+         }
+
+         @-moz-keyframes move {
+            0%   { top: 49%; left: 51%; }
+            50%  { top: 51%; left: 49%; }
+            100% { top: 49%; left: 51%; }
+         }
+
+         @-o-keyframes move {
+            0%   { top: 49%; left: 51%; }
+            50%  { top: 51%; left: 49%; }
+            100% { top: 49%; left: 51%; }
+         }
+
+         @keyframes move {
+            0%   { top: 49%; left: 51%; }
+            50%  { top: 51%; left: 49%; }
+            100% { top: 49%; left: 51%; }
+         }
+
+         #catling {
+            position: sticky;
+            z-index: 2;
+         }
+
+         #catling:hover {
+            -webkit-animation: spin 0.125s linear infinite, scale 1s infinite;
+            -moz-animation: spin 0.125s linear infinite, scale 1s infinite;
+            -o-animation: spin 0.125s linear infinite, scale 1s infinite;
+            animation: spin 0.125s linear infinite, scale 1s infinite;
+         }
+
+         #catling-background {
+            -webkit-animation: fade 30s, move 10s ease infinite;
+            -moz-animation: fade 30s, move 10s ease infinite;
+            -o-animation: fade 30s, move 10s ease infinite;
+            animation: fade 30s, move 10s ease infinite;
+            background-clip: padding-box;
+            display: none;
+            left: 50%;
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 75%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 102%;
+            z-index: 1;
+         }
       </style>
+
+      <script>
+         window.addEventListener(`load`, () => {
+            const catlingMusic = document.getElementById(`catling-music`);
+            const catlingBackground = document.getElementById(`catling-background`);
+            const catling = document.getElementById(`catling`);
+            catling.onmouseenter = _event => {
+               catlingMusic.play();
+               catlingBackground.style.display = `block`;
+            };
+            catling.onmouseleave = _event => {
+               catlingMusic.pause();
+               catlingBackground.style.display = `none`;
+            };
+         });
+      </script>
 
 
    </head>
 
 
    <body>
+
+
+      <img id="catling-background" src="/assets/art/catling.webp"></img>
+
+
+      <audio id="catling-music" src="https://files.catbox.moe/z5x5qg.mp3" hidden loop preload="auto"></audio>
 
 
       <div class="centre">
@@ -416,6 +556,11 @@
 
             <div class="large-corner-border">
                <div class="large-border box">
+
+
+                  <a href="https://catlingzone.poxi.io" target="_blank">
+                     <img id="catling" style="width: 3em; float: right;" src="/assets/what/catling.png" draggable="false"/>
+                  </a>
 
 
                   <div class="info">

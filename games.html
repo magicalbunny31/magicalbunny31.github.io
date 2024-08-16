@@ -30,47 +30,11 @@
       <script src="/assets/script/footer.js"></script>
       <script src="/assets/script/modal.js"></script>
 
-      <style>
-         @keyframes spin {
-            0%   { transform: rotate(  0deg); }
-            100% { transform: rotate(360deg); }
-         }
-
-         @keyframes scale {
-            0%   { scale: 1; }
-            50%  { scale: 1.5; }
-            100% { scale: 1; }
-         }
-
-         #catling:hover {
-            -webkit-animation: spin 0.125s linear infinite, scale 1s infinite;
-            -moz-animation: spin 0.125s linear infinite, scale 1s infinite;
-            -o-animation: spin 0.125s linear infinite, scale 1s infinite;
-            animation: spin 0.125s linear infinite, scale 1s infinite;
-         }
-      </style>
-
-      <script>
-         window.addEventListener(`load`, () => {
-            const catlingMusic = document.getElementById(`catling-music`);
-            const catling = document.getElementById(`catling`);
-            catling.onmouseenter = _event => {
-               catlingMusic.play();
-            };
-            catling.onmouseleave = _event => {
-               catlingMusic.pause();
-            };
-         });
-      </script>
-
 
    </head>
 
 
    <body>
-
-
-      <audio id="catling-music" src="https://files.catbox.moe/z5x5qg.mp3" hidden loop preload="auto"></audio>
 
 
       <div class="centre">
@@ -200,11 +164,6 @@
 
             <div class="large-corner-border">
                <div class="large-border box">
-
-
-                  <a href="https://catlingzone.poxi.io" target="_blank">
-                     <img id="catling" style="width: 3em; float: right;" src="/assets/what/catling.png" draggable="false"/>
-                  </a>
 
 
                   <div class="info">
