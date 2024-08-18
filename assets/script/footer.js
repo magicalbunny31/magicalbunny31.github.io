@@ -1534,6 +1534,8 @@ window.addEventListener(`load`, () => {
       `always remember to believe in yourself! because if you don't, who will? i know i sure won't!`,
       `if someone hates you for no reason, give them a reason to !`,
       `dude i know you're going to become stupid rich, in fact you're already stupid so you're half way there`,
+      `hey....remember, not every answer is as simple as a yes or no`,
+      `the saddening reality is that if you're popular you're basically untouchable`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
