@@ -7,20 +7,35 @@ window.addEventListener(`load`, async () => {
          <div class="large-corner-border">
             <div class="large-border box">
 
-               <span id="modal-content">
-                  
-               </span>
 
-               <div class="grid">
-                  <div class="corner-border" style="--border-colour: #f60000;">
-                     <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
-                        <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
-                        <div>
-                           <strong>close modal</strong>
+               <table style="border-collapse: collapse; height: 100%; width: 100%">
+               
+                  <tr>
+                     <td valign="top">
+                        <span id="modal-content">
+                     
+                        </span>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td valign="top">
+                        <div class="list" valign="bottom">
+                           <div class="corner-border" style="--border-colour: #f60000;">
+                              <a class="border large-button" id="close-modal" style="--border-colour: #f60000;" draggable="false">
+                                 <img class="emoji" src="/assets/emoji/mutant_standard/bomb.webp" alt="bomb" title=":bomb:" draggable="false"/>
+                                 <div>
+                                    <strong>close modal</strong>
+                                 </div>
+                              </a>
+                           </div>
                         </div>
-                     </a>
-                  </div>
-               </div>
+                     </td>
+                  </tr>
+               
+
+               </table>
+
 
             </div>
          </div>
@@ -64,18 +79,6 @@ window.addEventListener(`load`, async () => {
             <a href="https://github.com/magicalbunny31/magicalbunny31.github.io/issues" target="_blank">issue tracker</a>~
          </li>
       </ul>
-      <div class="grid">
-         <div class="corner-border" style="--border-colour: #171515;">
-            <a class="border large-button" href="https://github.com/magicalbunny31/magicalbunny31.github.io/issues" target="_blank" style="--border-colour: #171515;" draggable="false">
-               <img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/>
-               <div>
-                  <strong>issues</strong>
-                  <br/>
-                  @magicalbunny31/magicalbunny31.github.io
-               </div>
-            </a>
-         </div>
-      </div>
       <h2>
          <img class="emoji" src="/assets/emoji/mutant_standard/curled_page.webp" alt="curled page" title=":curled_page:" draggable="false"/>
          site info
@@ -182,7 +185,7 @@ window.addEventListener(`load`, async () => {
    const openModalButtons = document.getElementsByClassName(`modal-button`);
    for (const openModalButton of openModalButtons)
       openModalButton.onclick = () => {
-         modalBackground.style.display = `block`;
+         modalBackground.style.display = `flex`;
 
          const content = (() => {
             switch (openModalButton.id) {
@@ -205,7 +208,7 @@ window.addEventListener(`load`, async () => {
    // when the user clicks out of the modal, close the modal
    const modal = document.getElementById(`modal`);
    window.onclick = event => {
-      if (event.target == modal)
+      if (event.target == modalBackground)
          modalBackground.style.display = `none`;
    };
 });

@@ -427,14 +427,11 @@ footer {
 }
 
 #modal {
-   display: block;
-   bottom: 5%;
-   left: 0;
-   margin: auto;
-   padding: 0 25%;
+   left: 50%;
    position: fixed;
-   right: 0;
-   top: 5%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 50%;
    z-index: 2;
 }
 
@@ -444,8 +441,9 @@ footer {
 
 #modal-content {
    display: inline-block;
-   max-height: 75vh;
+   max-height: 80vh;
    overflow: scroll;
+   overflow-wrap: anywhere;
    width: 100%;
 }
 
@@ -534,16 +532,15 @@ a img {
    }
 
    #modal {
-      bottom: 0;
-      padding: 0 !important;
-      top: 0;
+      height: 100% !important;
+      left: 0 !important;
+      top: 0 !important;
+      transform: none !important;
+      width: 100% !important;
    }
 
    #modal > .large-corner-border, #modal > .large-corner-border > .large-border {
       height: 100% !important;
-   }
-
-   #modal-content {
-      max-height: 88.5% !important;
+      width: 100% !important;
    }
 }
