@@ -1535,7 +1535,16 @@ window.addEventListener(`load`, () => {
       `if someone hates you for no reason, give them a reason to !`,
       `dude i know you're going to become stupid rich, in fact you're already stupid so you're half way there`,
       `hey....remember, not every answer is as simple as a yes or no`,
-      `the saddening reality is that if you're popular you're basically untouchable`
+      `the saddening reality is that if you're popular you're basically untouchable`,
+      `feed me SAND`,
+      `they named me after that purple bunny from the digital circus`,
+      `kids these days will never know how it feels to wake up at 6am just to watch cbeebies`,
+      `fresh from the pawbean factory~`,
+      `KETCHUP AND MAYONNAISE DO NOT BELONG IN THE FRIDGE`,
+      `SE1 !!!!! oh sorry i thought i was going down i just had to scream my postcode`,
+      `i have seen things i wished i did not see.`,
+      `AND WHEN I'M ROCK HARD, I FUCKING ROCK HARD`,
+      `hello! i am computer bunny. they call me that because i am about to use my computer now!`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
