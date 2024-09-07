@@ -1544,7 +1544,11 @@ window.addEventListener(`load`, () => {
       `SE1 !!!!! oh sorry i thought i was going down i just had to scream my postcode`,
       `i have seen things i wished i did not see.`,
       `AND WHEN I'M ROCK HARD, I FUCKING ROCK HARD`,
-      `hello! i am computer bunny. they call me that because i am about to use my computer now!`
+      `hello! i am computer bunny. they call me that because i am about to use my computer now!`,
+      `PYRO PYRO GO AWAY! SLOP AGAIN ANOTHER DAY!`,
+      `2 + 2 = sex xD`,
+      `i hadn't been doing drugs whilst making this code, i just didn't get any sleep`,
+      `i gotta believe!`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
