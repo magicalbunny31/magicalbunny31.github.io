@@ -72,18 +72,21 @@
 
 
 
-window.addEventListener(`load`, () => {                                         // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠠⢤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-   setInterval(() => {                                                          // ⡴⠒⠒⠒⠒⠒⠶⠦⠄⢹⣄⠀⠀⠑⠄⣀⡠⠤⠴⠒⠒⠒⠀⠀
-      const boykisser = document.createElement(`img`);                          // ⢇⠀⠀⠀⠀⠀⠀⠐⠋⠀⠒⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀
-      boykisser.className = `boykisser`;                                        // ⠈⢆⠀⠀⠀⠀⡤⠤⣄⠀⠀⠀⠀⡤⠤⢄⠀⠀⠀⠀⠀⣠⠃⠀
-      boykisser.src = `/assets/what/boykisser.png`;                             // ⠀⡀⠑⢄⡀⡜⠀⡜⠉⡆⠀⠀⠀⡎⠙⡄⠳⡀⢀⣀⣜⠁⠀⠀
-      boykisser.style.left = `${Math.floor(Math.random() * 100 + 1)}%`;         // ⠀⠹⣍⠑⠀⡇⠀⢣⣰⠁⠀⠀⠀⠱⣠⠃⠀⡇⠁⣠⠞⠀⠀⠀
-      boykisser.draggable = false;                                              // ⠀⠀⠀⡇⠔⣦⠀⠀⠀⠈⣉⣀⡀⠀⠀⠰⠶⠖⠘⢧⠀⠀⠀⠀
-      document.body.insertBefore(boykisser, document.body.childNodes[0]);       // ⠀⠀⠰⠤⠐⠤⣀⡀⠀⠈⠑⣄⡁⠀⡀⣀⠴⠒⠀⠒⠃⠀⠀⠀
-      setTimeout(() => {                                                        // ⠀⠀⠀⠀⠀⠀⠘⢯⡉⠁⠀⠀⠀⠀⠉⢆⠀⠀⠀⠀⠀⠀⠀⠀
-         boykisser.remove()                                                     // ⠀⠀⠀⠀⠀⠀⢀⣞⡄⠀⠀⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀⠀⠀⠀
+window.addEventListener(`load`, () => {                                         // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠠⢤⣄⡀
+   const getBoykisserSpawnRate = () => Math.ceil(window.innerWidth / 150);      // ⡴⠒⠒⠒⠒⠒⠶⠦⠄⢹⣄⠀⠀⠑⠄⣀⡠⠤⠴⠒⠒⠒⠀
+   const spawnBoykisser = () => {                                               // ⢇⠀⠀⠀⠀⠀⠀⠐⠋⠀⠒⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠
+      const boykisser = document.createElement(`img`);                          // ⠈⢆⠀⠀⠀⠀⡤⠤⣄⠀⠀⠀⠀⡤⠤⢄⠀⠀⠀⠀⠀⣠⠃
+      boykisser.className = `boykisser`;                                        // ⠀⡀⠑⢄⡀⡜⠀⡜⠉⡆⠀⠀⠀⡎⠙⡄⠳⡀⢀⣀⣜⠁
+      boykisser.src = `/assets/what/boykisser.png`;                             // ⠀⠹⣍⠑⠀⡇⠀⢣⣰⠁⠀⠀⠀⠱⣠⠃⠀⡇⠁⣠⠞
+      boykisser.style.left = `${Math.floor(Math.random() * 100 + 1)}%`;         // ⠀⠀⠀⡇⠔⣦⠀⠀⠀⠈⣉⣀⡀⠀⠀⠰⠶⠖⠘⢧
+      boykisser.draggable = false;                                              // ⠀⠀⠰⠤⠐⠤⣀⡀⠀⠈⠑⣄⡁⠀⡀⣀⠴⠒⠀⠒⠃
+      document.body.insertBefore(boykisser, document.body.childNodes[0]);       // ⠀⠀⠀⠀⠀⠀⠘⢯⡉⠁⠀⠀⠀⠀⠉⢆
+      setTimeout(() => {                                                        // ⠀⠀⠀⠀⠀⠀⢀⣞⡄⠀⠀⠀⠀⠀⠀⠈⡆
+         boykisser.remove()
       }, 10000);
-   }, 2000);
+      setTimeout(spawnBoykisser, 10000 / getBoykisserSpawnRate());
+   };
+   setTimeout(spawnBoykisser, 10000 / getBoykisserSpawnRate());
 });
 
 
