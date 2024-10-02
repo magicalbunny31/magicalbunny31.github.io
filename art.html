@@ -227,6 +227,13 @@
                catlingBackground.style.display = `none`;
             };
          });
+
+         window.addEventListener(`load`, () => {
+            const catling = document.getElementById(`catling`);
+            const isGoldenCatling = !Math.floor(Math.random() * 100); // 1% chance of GOLDEN catling
+            if (isGoldenCatling)
+               catling.src = `/assets/what/golden_catling.webp`;
+         });
       </script>
 
 
