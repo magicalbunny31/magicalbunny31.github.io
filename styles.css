@@ -366,6 +366,10 @@ nav {
 
 /* tab */
 
+.tab-heading-container {
+   display: grid;
+}
+
 .tab-heading {
    display: flex;
    flex-direction: row;
