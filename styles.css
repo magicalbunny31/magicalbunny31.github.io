@@ -288,6 +288,12 @@ article {
 
 /* sidebar */
 
+.navigator {
+   order: 621;
+   position: sticky;
+   top: 1.5em;
+}
+
 nav {
    display: flex;
    -webkit-flex: 1;
@@ -546,7 +552,8 @@ a img {
    }
 
    .navigator {
-      order: 621
+      position: unset;
+      top: 0;
    }
 
    #modal {
