@@ -114,6 +114,10 @@ p {
    margin: 0;
 }
 
+ul {
+   padding-left: 2em;
+}
+
 li {
    padding: 0.25em 0;
 }
@@ -532,6 +536,10 @@ a img {
 
    .mobile {
       display: block;
+   }
+
+   ul {
+      padding-left: 1.25em;
    }
 
    .grid {
