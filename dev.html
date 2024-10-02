@@ -31,15 +31,6 @@
       <script src="/assets/script/modal.js"></script>
 
       <style>
-         .avatar {
-            border-radius: 100%;
-         }
-
-         .inline-button-emoji {
-            float: none !important;
-            height: 1.25em !important;
-         }
-
          .archived {
             background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("/assets/background/spoiler.gif");
             background-size: cover;
@@ -68,6 +59,57 @@
                   div.style.display = `none`;
             };
          });
+
+         window.addEventListener(`load`, () => {
+            const hash = window.location.hash.slice(1);
+            const buttonId = [ `nuzzles.dev`, `flooded-area-bot-and-the-killer`, `halowo-levels`, `mintbubblex` ].includes(hash)
+               ? hash
+               : `fox-bot`;
+
+            const button = document.getElementById(buttonId);
+            button.classList.add(`disabled`);
+
+            const buttonText = button.querySelector(`div`);
+            buttonText.innerHTML = `<em>${buttonText.innerHTML}</em>`;
+
+            const [ content ] = document.getElementsByClassName(`tab-content`);
+            for (const child of content.querySelectorAll(`div.content`))
+               child.style.display = `none`;
+
+            const buttonContent = document.getElementById(`${buttonId}-content`);
+            buttonContent.style.display = `block`;
+         });
+
+         window.addEventListener(`hashchange`, hashChangeEvent => {
+            const oldHash = hashChangeEvent.oldURL.split(`#`).at(-1);
+            const oldButtonId = [ `nuzzles.dev`, `flooded-area-bot-and-the-killer`, `halowo-levels`, `mintbubblex` ].includes(oldHash)
+               ? oldHash
+               : `fox-bot`;
+
+            const oldButton = document.getElementById(oldButtonId);
+            oldButton.classList.remove(`disabled`);
+
+            const oldButtonText = oldButton.querySelector(`div`);
+            oldButtonText.innerHTML = `<strong>${oldButtonText.innerText}</strong>`;
+
+            const newHash = hashChangeEvent.newURL.split(`#`).at(-1);
+            const newButtonId = [ `nuzzles.dev`, `flooded-area-bot-and-the-killer`, `halowo-levels`, `mintbubblex` ].includes(newHash)
+               ? newHash
+               : `fox-bot`;
+
+            const newButton = document.getElementById(newButtonId);
+            newButton.classList.add(`disabled`);
+
+            const newButtonText = newButton.querySelector(`div`);
+            newButtonText.innerHTML = `<em>${newButtonText.innerHTML}</em>`;
+
+            const [ content ] = document.getElementsByClassName(`tab-content`);
+            for (const child of content.querySelectorAll(`div.content`))
+               child.style.display = `none`;
+
+            const buttonContent = document.getElementById(`${newButtonId}-content`);
+            buttonContent.style.display = `block`;
+         });
       </script>
 
 
@@ -95,26 +137,558 @@
                      </h1>
                      <ul>
                         <li>
-                           i have been programming in
-                           <a href="https://nodejs.org" target="_blank"><img class="emoji" src="/assets/logo/node.js.png" alt="node.js logo" title="node.js" draggable="false"/> node.js</a>
-                           and
-                           <a href="https://www.python.org" target="_blank"><img class="emoji" src="/assets/logo/python.png" alt="python logo" title="python" draggable="false"/> python</a>
-                           since 2019, primarily developing discord apps
-                        </li>
-                        <li>
-                           interested in me creating a discord app for your community or other programming project for your needs? shoot me a message on
-                           <a href="/discord" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord</a>~
+                           i am a
+                           <strong>back-end developer</strong>
+                           who primarily creates and maintains discord apps for..
                         </li>
                         <ul>
                            <li>
-                              looking for my art commissions instead? please see
-                              <a href="/art"><img class="emoji" src="/assets/emoji/mutant_standard/artist_palette.webp" alt="artist palette" title=":artist_palette:" draggable="false"/> art and commissions</a>!
+                              my own personal projects
+                              (<a href="/fox-bot"><img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/> fox bot</a>,
+                              <a href="/bun"><img class="emoji circle-border" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" draggable="false"/> bun</a>,
+                              <a href="/transport-handbook"><img class="emoji circle-border" src="/assets/avatar/transport_handbook.webp" alt="transport handbook's avatar" title="bun" draggable="false"/> transport handbook</a>)
+                           </li>
+                           <li>
+                              the functionality of discord servers
+                              (<a href="#my-work">scroll down to see examples</a>~)
                            </li>
                         </ul>
                         <li>
-                           other than that, i only have the odd tidbits of scripts that would probably be worthless to you..
+                           my developer attitude
+                           <em>tend</em>
+                           to show off my lax style, as seen by informality with grammar!
+                        </li>
+                        <li>
+                           i have achieved a grade
+                           <strong>A</strong>
+                           <a href="https://wikipedia.org/wiki/A-level" target="_blank"><img class="emoji" src="/assets/logo/wikipedia.png" alt="wikipedia logo" title="wikipedia" draggable="false"/> GCE/A "A-level"</a>
+                           in
+                           <a href="https://www.aqa.org.uk/subjects/computer-science-and-it/as-and-a-level/computer-science-7516-7517" target="_blank">Computer Science (AQA) [7517D]</a>
+                           so you know you can probably trust me
+                        </li>
+                        <li>i primarily code using the languages:</li>
+                        <ul>
+                           <li>
+                              <a href="https://nodejs.org" target="_blank"><img class="emoji" src="/assets/logo/node.js.png" alt="node.js logo" title="node.js" draggable="false"/> Node.js</a>
+                              (<strong>advanced</strong>,
+                              since
+                              <strong>2018</strong>)
+                           </li>
+                           <li>
+                              <a href="https://www.python.org" target="_blank"><img class="emoji" src="/assets/logo/python.png" alt="python logo" title="python" draggable="false"/> Python</a>
+                              (<strong>intermediate</strong>,
+                              since
+                              <strong>2019</strong>)
+                           </li>
+                           <li>
+                              <a href="https://wikipedia.org/wiki/HTML5" target="_blank"><img class="emoji" src="/assets/logo/html5.png" alt="html5 logo" title="html5" draggable="false"/> HTML5</a>,
+                              <a href="https://wikipedia.org/wiki/CSS#CSS_3" target="_blank"><img class="emoji" src="/assets/logo/css_3.png" alt="css 3 logo" title="css 3" draggable="false"/> CSS 3</a>,
+                              <a href="https://wikipedia.org/wiki/JavaScript" target="_blank"><img class="emoji" src="/assets/logo/javascript.png" alt="javascript logo" title="javascript" draggable="false"/> JavaScript</a>
+                              (<strong>beginner</strong>,
+                              since
+                              <strong>2022</strong>)
+                           </li>
+                           <li>
+                              <a href="https://wikipedia.org/wiki/SQL" target="_blank"><img class="emoji" src="/assets/emoji/google_material_design_icons/database.png" alt="database" title=":database:" draggable="false"/> SQL</a>
+                              (<strong>beginner</strong>,
+                              since
+                              <strong>2023</strong>)
+                           </li>
+                        </ul>
+                        <li>..and here are the platforms and tools which i know and utilise:</li>
+                        <ul>
+                           <li>
+                              <a href="https://discord.com/developers/docs/intro" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> Discord API</a>,
+                              social platform developer WebSocket/REST API
+                              (<strong>advanced</strong>,
+                              since
+                              <strong>2018</strong>)
+                           </li>
+                           <li>
+                              <a href="https://git-scm.com" target="_blank"><img class="emoji" src="/assets/logo/git.png" alt="git logo" title="git" draggable="false"/> Git</a>
+                              /
+                              <a href="https://github.com" target="_blank"><img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/> GitHub</a>,
+                              distributed version control
+                              (<strong>intermediate</strong>,
+                              since
+                              <strong>2020</strong>)
+                           </li>
+                           <li>
+                              <a href="https://redis.io" target="_blank"><img class="emoji" src="/assets/logo/redis.png" alt="redis logo" title="redis" draggable="false"/> Redis</a>,
+                              NoSQL key/value store
+                              (<strong>intermediate</strong>,
+                              <strong>2020</strong>-<strong>2022</strong>)
+                           </li>
+                           <li>
+                              <a href="https://cloud.google.com" target="_blank"><img class="emoji" src="/assets/logo/google_cloud.png" alt="google cloud logo" title="google cloud" draggable="false"/> Google Cloud</a>:
+                              <a href="https://cloud.google.com/firestore" target="_blank"><img class="emoji" src="/assets/logo/firestore.png" alt="google cloud firestore logo" title="google cloud firestore" draggable="false"/> Firestore</a>,
+                              NoSQL document store
+                              (<strong>intermediate</strong>,
+                              since
+                              <strong>2022</strong>)
+                           </li>
+                           <li>
+                              <a href="https://www.cloudflare.com" target="_blank"><img class="emoji" src="/assets/logo/cloudflare.png" alt="cloudflare logo" title="cloudflare" draggable="false"/> Cloudflare</a>:
+                              <a href="https://developers.cloudflare.com/workers" target="_blank"><img class="emoji" src="/assets/logo/workers_and_pages.png" alt="cloudflare workers & pages logo" title="cloudflare workers & pages" draggable="false"/> Workers</a>,
+                              serverless function execution environment 
+                              (<strong>beginner</strong>,
+                              since
+                              <strong>2024</strong>)
+                           </li>
+                        </ul>
+                     </ul>
+
+                     <h2>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/moneybag.webp" alt="moneybag" title=":moneybag:" draggable="false"/>
+                        hire me to do YOUR work
+                     </h2>
+                     <ul>
+                        <li>from creating a custom discord app for your community to your over-ambitious side hustle, there's a lot i could do to help you achieve your goals!</li>
+                        <ul>
+                           <li>
+                              interested, hm? shoot me a message on
+                              <a href="/discord" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord</a>
+                              and we can figure things out from there
+                           </li>
+                        </ul>
+                        <li>
+                           looking for my art commissions instead? please see
+                           <a href="/art"><img class="emoji" src="/assets/emoji/mutant_standard/artist_palette.webp" alt="artist palette" title=":artist_palette:" draggable="false"/> art and commissions</a>!
                         </li>
                      </ul>
+
+                  </div>
+               </div>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h1 id="my-work">
+                        <img class="emoji" src="/assets/emoji/mutant_standard/bookmark.webp" alt="bookmark" title=":bookmark:" draggable="false"/>
+                        my work
+                     </h1>
+
+                     <div class="tab-heading-container">
+
+                        <div class="tab-heading">
+                           <div class="corner-border tab-item" style="--border-colour: #feb139;">
+                              <a class="border button" id="fox-bot" href="#fox-bot" style="--border-colour: #feb139; --disabled-colour: #b26e01;" draggable="false">
+                                 <img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                                 <div>
+                                    <strong>fox bot 🦊</strong>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="corner-border tab-item">
+                              <a class="border button" id="nuzzles.dev" href="#nuzzles.dev" style="--disabled-colour: #808080;" draggable="false">
+                                 <img class="emoji" src="/assets/emoji/mutant_standard/furry_pride.webp" alt="furry pride" title=":furry_pride:" loading="lazy" draggable="false"/>
+                                 <div>
+                                    <strong>nuzzles.dev</strong>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="corner-border tab-item" style="--border-colour: #4de94c;">
+                              <a class="border button" id="flooded-area-bot-and-the-killer" href="#flooded-area-bot-and-the-killer" style="--border-colour: #4de94c; --disabled-colour: #149f14;" draggable="false">
+                                 <img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
+                                 <div>
+                                    <strong>flooded area bot and the killer</strong>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="corner-border tab-item" style="--border-colour: #4815aa;">
+                              <a class="border button" id="halowo-levels" href="#halowo-levels" style="--border-colour: #4815aa; --disabled-colour: #270b5b;" draggable="false">
+                                 <img class="emoji circle-border" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/>
+                                 <div>
+                                    <strong>greg. 🦎</strong>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="corner-border tab-item" style="--border-colour: #3498db;">
+                              <a class="border button" id="mintbubblex" href="#mintbubblex" style="--border-colour: #3498db; --disabled-colour: #175782;" draggable="false">
+                                 <img class="emoji circle-border" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" loading="lazy" draggable="false"/>
+                                 <div>
+                                    <strong>MintBubblex 🍭</strong>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <hr/>
+
+                     <div class="tab-content">
+
+                        <div class="content" id="fox-bot-content">
+
+                           <div class="media-corner-border">
+                              <img class="border thumbnail" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/>
+                           </div>
+      
+                           <h2>
+                              <img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                              fox bot 🦊
+                           </h2>
+      
+                           <p style="font-size: 0.75em; margin-top: -1em; margin-left: 2.5em;">
+                              app developer
+                           </p>
+      
+                           <ul>
+                              <li>
+                                 <a href="/fox-bot"><img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/> fox bot</a>
+                                 is a
+                                 <a href="https://discord.com/developers/docs/quick-start/overview-of-apps" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord app</a>
+                                 specifically designed for all types of fox content!
+                              </li>
+                              <li>as the solo developer of this app, i am responsible for:</li>
+                              <ul>
+                                 <li>maintaining the app so that it continues running in the most efficient ways possible</li>
+                                 <li>updating the app; bringing various new features and general quality of life updates to streamline the user experience</li>
+                                 <li>
+                                    providing the online service so that users across
+                                    <a href="https://discord.com" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord</a>
+                                    can access it at any time with minimal effort
+                                 </li>
+                              </ul>
+                              <li>
+                                 many components which make up
+                                 <a href="/fox-bot"><img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/> fox bot</a>
+                                 include:
+                              </li>
+                              <ul>
+                                 <li>laying out and structuring the core foundation of the app: from interactions to scheduling</li>
+                                 <li>making the user interface to navigate and control easy</li>
+                                 <li>keeping the app accessible as possible</li>
+                                 <li>providing a simple way for users to delete their data from the app - eliminating the need to jump through many holes like contacting support directly</li>
+                              </ul>
+                           </ul>
+      
+                           <div class="grid">
+                              <div class="corner-border" style="--border-colour: #feb139;">
+                                 <a class="border large-button" href="/fox-bot" style="--border-colour: #feb139;" draggable="false">
+                                    <img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                                    <div>
+                                       <strong>fox bot 🦊</strong>
+                                       <br/>
+                                       <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/fox.webp" alt="fox" title=":fox:" draggable="false"/>
+                                       your discord bot for foxes~ ✨
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+      
+                           <div class="media-corner-border" style="margin-top: 1em;">
+                              <img class="border" src="/assets/banner/fox_bot.webp" alt="the fox in fox bot's avatar's legs" title="fox bot" draggable="false" loading="lazy"/>
+                           </div>
+
+                           <p style="font-size: 0.75em; margin-top: 0.75em;">
+                              bot avatar and banner by
+                              <a href="https://www.instagram.com/aviation558_" target="_blank"><img class="emoji" src="/assets/logo/instagram.png" alt="instagram logo" title="instagram" draggable="false"/> @aviation558_</a>
+                           </p>
+
+                        </div>
+
+                        <div class="content" id="nuzzles.dev-content">
+
+                           <h2>
+                              <img class="emoji" src="/assets/emoji/mutant_standard/furry_pride.webp" alt="furry pride" title=":furry_pride:" loading="lazy" draggable="false"/>
+                              nuzzles.dev
+                           </h2>
+      
+                           <p style="font-size: 0.75em; margin-top: -1em; margin-left: 2.5em;">
+                              website developer
+                           </p>
+      
+                           <ul>
+                              <li>
+                                 <a href="/"><img class="emoji" src="/assets/emoji/mutant_standard/furry_pride.webp" alt="furry pride" title=":furry_pride:" loading="lazy" draggable="false"/> nuzzles.dev</a>
+                                 is the website you are looking at right now!
+                              </li>
+                              <li>it is a place for me to..</li>
+                              <ul>
+                                 <li>show off my projects and portfolio</li>
+                                 <li>learn more about my cool shit</li>
+                                 <li>host resources for my apps, such as their terms of services and privacy policies</li>
+                                 <li>have a place to express myself to the WHOLE world !!!! (scary)</li>
+                              </ul>
+                              <li>yes i made this website in PURE html because i thought it'd be funny</li>
+                              <ul>
+                                 <li>it really solidified my understanding of the html webspace....something school had failed me for years!</li>
+                                 <li>
+                                    will i use a framework like
+                                    <a href="https://react.dev" target="_blank">React</a>?
+                                    maybe; enjoy the scruffy web code for now~
+                                 </li>
+                              </ul>
+                           </ul>
+      
+                           <div class="grid">
+                              <div class="corner-border">
+                                 <a class="border large-button" href="/" draggable="false">
+                                    <img class="emoji" src="/assets/emoji/mutant_standard/furry_pride.webp" alt="furry pride" title=":furry_pride:" loading="lazy" draggable="false"/>
+                                    <div>
+                                       <strong>nuzzles.dev</strong>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="corner-border" style="--border-colour: #171515;">
+                                 <a class="border large-button" href="https://github.com/magicalbunny31/magicalbunny31.github.io" target="_blank" style="--border-colour: #171515;" draggable="false">
+                                    <img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/>
+                                    <div>
+                                       <strong>website source</strong>
+                                       <br/>
+                                       magicalbunny31/magicalbunny31.github.io
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+
+                        </div>
+
+                        <div class="content" id="flooded-area-bot-and-the-killer-content">
+
+                           <div class="media-corner-border">
+                              <img class="border thumbnail" src="/assets/game/flooded_area_game_icon.webp" alt="flooded area icon" title="flooded area" draggable="false"/>
+                           </div>
+      
+                           <h2>
+                              <img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
+                              flooded area bot and
+                              <img class="emoji circle-border" src="/assets/avatar/the_killer.webp" alt="the killer's avatar" title="the killer" loading="lazy" draggable="false"/>
+                              the killer
+                           </h2>
+      
+                           <p style="font-size: 0.75em; margin-top: -1em; margin-left: 2.5em;">
+                              app developer for
+                              <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>
+                           </p>
+      
+                           <ul>
+                              <li>
+                                 <a href="/flooded-area-bot"><img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" draggable="false"/> flooded area bot</a>
+                                 is a
+                                 <a href="https://discord.com/developers/docs/quick-start/overview-of-apps" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord app</a>
+                                 which brings new features to the
+                                 <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>!
+                              </li>
+                              <li>
+                                 features the
+                                 <a href="/flooded-area-bot"><img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" draggable="false"/> flooded area bot</a>
+                                 app brings to the server includes:
+                              </li>
+                              <ul>
+                                 <li>
+                                    <s>
+                                       a thread-based system for the
+                                       <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
+                                       game suggestions
+                                    </s>
+                                 </li>
+                                 <li>
+                                    a tickets system, for handling: player reports, ban appeals, and mod mail for
+                                    <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
+                                    and the
+                                    <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>
+                                 </li>
+                                 <li>"fun" features to keep the community engaged, through: commands, levels, or other means such as question of the day</li>
+                                 <li>interactive ways for viewing game information: condensing and ordering text using interaction components or setting them out nicer using colourful embeds</li>
+                              </ul>
+                              <li>
+                                 <a href="/flooded-area-bot#the-killer"><img class="emoji circle-border" src="/assets/avatar/the_killer.webp" alt="the killer's avatar" title="the killer" draggable="false"/> the killer</a>
+                                 is a
+                                 <a href="https://discord.com/developers/docs/quick-start/overview-of-apps" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord app</a>
+                                 which (also) brings new features to the
+                                 to take place from the
+                                 <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>
+                              </li>
+                              <li>
+                                 features
+                                 <a href="/flooded-area-bot#the-killer"><img class="emoji circle-border" src="/assets/avatar/the_killer.webp" alt="the killer's avatar" title="flooded area bot" draggable="false"/> the killer</a>
+                                 app brings to the server includes:</li>
+                              <ul>
+                                 <li>
+                                    a feature-rich way for the
+                                    <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
+                                    staff to (mass-)moderate players, involving: (temporary) bans; kicks; and revoke bans, straight from the discord server without needing to join in-game through the
+                                    <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
+                                 </li>
+                                 <li>
+                                    <s>
+                                       giving the
+                                       <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
+                                       staff an easy way to search up the moderation history for the players
+                                    </s>
+                                 </li>
+                              </ul>
+                           </ul>
+      
+                           <div class="grid">
+                              <div class="corner-border" style="--border-colour: #4de94c;">
+                                 <a class="border large-button" href="/flooded-area-bot" style="--border-colour: #4de94c;" draggable="false">
+                                    <img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
+                                    <div>
+                                       <strong>flooded area bot 🌊</strong>
+                                       <br/>
+                                       🌊 flooded area community's discord bot
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="corner-border" style="--border-colour: #4c6468;">
+                                 <a class="border large-button" href="/flooded-area-bot#the-killer" style="--border-colour: #4c6468;" draggable="false">
+                                    <img class="emoji circle-border" src="/assets/avatar/the_killer.webp" alt="the killer's avatar" title="the killer" loading="lazy" draggable="false"/>
+                                    <div>
+                                       <strong>the killer</strong>
+                                       <br/>
+                                       🤖 in-game moderation for flooded area community
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+      
+                           <div class="media-corner-border" style="margin-top: 1em;">
+                              <img class="border" src="/assets/banner/flooded_area_bot.webp" alt="an ocean of water background with blocky parts floating and meteors falling" title="flooded area bot" draggable="false" loading="lazy"/>
+                           </div>
+
+                           <p style="font-size: 0.75em; margin-top: 0.75em;">
+                              game icon and banner by
+                              <a href="https://twitter.com/hi_itsBlizzard" target="_blank"><img class="emoji" src="/assets/logo/twitter.png" alt="twitter logo" title="twitter" draggable="false"/> @hi_itsBlizzard</a>
+                           </p>
+
+                        </div>
+
+                        <div class="content" id="halowo-levels-content">
+
+                           <div class="media-corner-border">
+                              <img class="border thumbnail" src="/assets/what/halos_community.webp" alt="halo's community!!" title="halo's community!!" draggable="false"/>
+                           </div>
+      
+                           <h2>
+                              <img class="emoji circle-border" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/>
+                              greg. 🦎
+                           </h2>
+      
+                           <p style="font-size: 0.75em; margin-top: -1em; margin-left: 2.5em;">
+                              app developer for
+                              <a href="https://discord.gg/FHFycad" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> halo's community!!</a>
+                              and another related server
+                           </p>
+      
+                           <ul>
+                              <li>
+                                 <a href="/halowo-levels"><img class="emoji circle-border" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/> greg</a>
+                                 is a
+                                 <a href="https://discord.com/developers/docs/quick-start/overview-of-apps" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord app</a>
+                                 which brings new features to
+                                 <a href="https://discord.gg/FHFycad" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> halo's community!!</a>!
+                              </li>
+                              <li>features this app brings to the server includes:</li>
+                              <ul>
+                                 <li>
+                                    viewing
+                                    <a href="https://www.roblox.com/games/8936217743/Tide-Rush-2" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> tide rush 2</a>
+                                    game data straight from the discord server using the
+                                    <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
+                                 </li>
+                                 <li>
+                                    interacting with
+                                    <a href="https://www.roblox.com/games/8936217743/Tide-Rush-2" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> tide rush 2</a>
+                                    through sending announcements from the discord server using the
+                                    <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
+                                 </li>
+                                 <li>
+                                    levelling for the server's members, ported from
+                                    <a href="https://github.com/avaire/avaire" target="_blank"><img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/> Avaire</a>
+                                    after it had shut down
+                                 </li>
+                                 <li>
+                                    a
+                                    <a href="https://discord.com" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord</a>-to-<a href="https://www.guilded.gg" target="_blank"><img class="emoji" src="/assets/logo/guilded.png" alt="guilded logo" title="guilded" draggable="false"/> guilded</a>
+                                    message bridge that uses webhooks to synchronises messages between channels in both servers
+                                 </li>
+                              </ul>
+                           </ul>
+      
+                           <div class="grid">
+                              <div class="corner-border" style="--border-colour: #4815aa;">
+                                 <a class="border large-button" href="/halowo-levels" style="--border-colour: #4815aa;" draggable="false">
+                                    <img class="emoji circle-border" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/>
+                                    <div>
+                                       <strong>greg. 🦎</strong>
+                                       <br/>
+                                       🦎 i greg.
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+
+                        </div>
+
+                        <div class="content" id="mintbubblex-content">
+
+                           <div class="media-corner-border">
+                              <img class="border thumbnail" src="/assets/what/aethen_s_social_area.webp" alt="aethen's social area" title="aethen's social area" draggable="false"/>
+                           </div>
+      
+                           <h2>
+                              <img class="emoji circle-border" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" loading="lazy" draggable="false"/>
+                              MintBubblex 🍭
+                           </h2>
+      
+                           <p style="font-size: 0.75em; margin-top: -1em; margin-left: 2.5em;">
+                              app developer for
+                              <a href="https://discord.gg/DMjWkW96f8" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> aethen's social area</a>
+                           </p>
+      
+                           <ul>
+                              <li>
+                                 <a href="/mintbubblex"><img class="emoji circle-border" src="/assets/avatar/mintbubblex.webp" alt="mintbubblex's avatar" title="greg." loading="lazy" draggable="false"/> MintBubblex</a>
+                                 is a
+                                 <a href="https://discord.com/developers/docs/quick-start/overview-of-apps" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord app</a>
+                                 which brings new features to
+                                 <a href="https://discord.gg/DMjWkW96f8" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> aethen's social area</a>!
+                              </li>
+                              <li>features this app brings to the server includes:</li>
+                              <ul>
+                                 <li>
+                                    a verification gate which prompts new server members of
+                                    <a href="https://discord.gg/DMjWkW96f8" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> aethen's social area</a>
+                                    to fill a form out that the staff review before granted these new members access to the server
+                                 </li>
+                                 <li>
+                                    a commissions price calculator that gives estimates of prices for
+                                    <a href="https://twitter.com/JazelinaPleb" target="_blank"><img class="emoji" src="/assets/logo/twitter.png" alt="twitter logo" title="twitter" draggable="false"/> @JazelinaPleb</a>'s
+                                    art commissions depending on: the number of characters, base style, positions, and extras; as well as freebies
+                                 </li>
+                              </ul>
+                           </ul>
+      
+                           <div class="grid">
+                              <div class="corner-border" style="--border-colour: #3498db;">
+                                 <a class="border large-button" href="/mintbubblex" style="--border-colour: #3498db;" draggable="false">
+                                    <img class="emoji circle-border" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" loading="lazy" draggable="false"/>
+                                    <div>
+                                       <strong>MintBubblex 🍭</strong>
+                                       <br/>
+                                       🍭 verification app for Aethen's Social Area
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+      
+                           <div class="media-corner-border" style="margin-top: 1em;">
+                              <img class="border" src="/assets/what/mrrrph.png" alt="a long anthropomorphic fox on its side" title="mrrrph" draggable="false" loading="lazy"/>
+                           </div>
+
+                           <p style="font-size: 0.75em; margin-top: 0.75em;">
+                              server icon and banner by
+                              <a href="https://twitter.com/JazelinaPleb" target="_blank"><img class="emoji" src="/assets/logo/twitter.png" alt="twitter logo" title="twitter" draggable="false"/> @JazelinaPleb</a>
+                           </p>
+
+                        </div>
+
+                     </div>
 
                   </div>
                </div>
@@ -129,33 +703,51 @@
                      </h1>
 
                      <ul>
+                        <li>here's all the discord apps that i've made over the years: you can click on them to view more information about them~</li>
                         <li>
                            looking for the
                            <img class="emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
                            <strong>terms of service</strong>
                            and
                            <img class="emoji" src="/assets/emoji/mutant_standard/curled_page.webp" alt="curled page" title=":curled_page:" draggable="false"/>
-                           <strong>privacy policy</strong>
-                           for my apps?
+                           <strong>privacy policy</strong>?
+                           well, you can either..
                         </li>
                         <ul>
                            <li>
-                              well,
-                              <em>they're different for each app!</em>
-                              ✨
+                              click on the button of the app you want to view its documents for below and you'll be able to find links to them (if they have some)
                            </li>
-                        </ul>
-                        <li>first, select the app you want to view them for</li>
-                        <ul>
                            <li>
-                              then there'll be buttons linking to the terms/policies just
-                              <img class="emoji" src="/assets/emoji/pulexart/happ.png" alt="smiling fox" title=":happ:" draggable="false"/>
-                              <em>waiting</em>
-                              <img class="emoji" src="/assets/emoji/pulexart/happ.png" alt="smiling fox" title=":happ:" draggable="false"/>
-                              to be pressed~
+                              visit the following pages for all of my apps'
+                              <a href="/terms"><img class="emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/> terms of services</a>
+                              and
+                              <a href="/privacy"><img class="emoji" src="/assets/emoji/mutant_standard/curled_page.webp" alt="curled page" title=":curled_page:" draggable="false"/> privacy policies</a>
                            </li>
                         </ul>
                      </ul>
+
+                     <div class="grid">
+                        <div class="corner-border">
+                           <a class="border large-button" href="/terms" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
+                              <div>
+                                 <strong>terms of service</strong>
+                                 <br/>
+                                 all apps
+                              </div>
+                           </a>
+                        </div>
+                        <div class="corner-border">
+                           <a class="border large-button" href="/privacy" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/curled_page.webp" alt="curled page" title=":curled_page:" draggable="false"/>
+                              <div>
+                                 <strong>privacy policy</strong>
+                                 <br/>
+                                 all apps
+                              </div>
+                           </a>
+                        </div>
+                     </div>
 
                      <h2>
                         <img class="emoji" src="/assets/emoji/mutant_standard/globe.webp" alt="globe" title=":globe:" draggable="false"/>
@@ -164,10 +756,10 @@
                      <div class="grid">
                         <div class="corner-border" style="--border-colour: #feb139;">
                            <a class="border large-button" href="/fox-bot" style="--border-colour: #feb139;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>fox bot 🦊</strong>
-                                 <br>
+                                 <br/>
                                  <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/fox.webp" alt="fox" title=":fox:" draggable="false"/>
                                  your discord bot for foxes~ ✨
                               </div>
@@ -175,21 +767,21 @@
                         </div>
                         <div class="corner-border" style="--border-colour: #c653ff;">
                            <a class="border large-button" href="/bun" style="--border-colour: #c653ff;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>bun 🐰</strong>
-                                 <br>
+                                 <br/>
                                  <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/rabbit.webp" alt="rabbit" title=":rabbit:" draggable="false"/>
                                  a furry discord bot for everyone! ✨
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #3498db;">
-                           <a class="border large-button" href="/bun" style="--border-colour: #3498db;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/transport_handbook.webp" alt="transport handbook's avatar" title="transport handbook" loading="lazy" draggable="false"/>
+                           <a class="border large-button" href="/transport-handbook" style="--border-colour: #3498db;" draggable="false">
+                              <img class="emoji circle-border" src="/assets/avatar/transport_handbook.webp" alt="transport handbook's avatar" title="transport handbook" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>transport handbook 🛫</strong>
-                                 <br>
+                                 <br/>
                                  <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
                                  your public transport handbook for the uk! ✨
                               </div>
@@ -203,11 +795,11 @@
                      </h2>
                      <div class="grid">
                         <div class="corner-border" style="--border-colour: #e78522;">
-                           <a class="border large-button" href="/fox-bot" style="--border-colour: #e78522;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/fox_kit.webp" alt="fox bot's avatar" title="fox bot" loading="lazy" draggable="false"/>
+                           <a class="border large-button" href="/fox-kit" style="--border-colour: #e78522;" draggable="false">
+                              <img class="emoji circle-border" src="/assets/avatar/fox_kit.webp" alt="fox kit's avatar" title="fox kit" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>fox kit 🐾</strong>
-                                 <br>
+                                 <br/>
                                  <img class="emoji inline-button-emoji" src="/assets/emoji/other/orange_paws.png" alt="orange paws" title=":orange_paws:" draggable="false"/>
                                  bunny furfest 🐰🐾's convention security
                               </div>
@@ -215,43 +807,22 @@
                         </div>
                         <div class="corner-border" style="--border-colour: #ffd995;">
                            <a class="border large-button" href="/fennec" style="--border-colour: #ffd995;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/fennec.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/fennec.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>fennec 💻</strong>
-                                 <br>
+                                 <br/>
                                  <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/laptop.webp" alt="laptop" title=":laptop:" draggable="false"/>
-                                 the bot-for-all-bots helper~
-                              </div>
-                           </a>
-                        </div>
-                        <div class="corner-border" style="--border-colour: #fe83c6;">
-                           <a class="border large-button" href="/kettu" style="--border-colour: #fe83c6;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/kettu.webp" alt="transport handbook's avatar" title="transport handbook" loading="lazy" draggable="false"/>
-                              <div>
-                                 <strong>kettu 🦊</strong>
-                                 <br>
-                                 <img class="emoji inline-button-emoji" src="/assets/emoji/other/blushy.png" alt="blushing furry" title=":blushy:" draggable="false"/>
-                                 bunny's more...."yiffy" app
+                                 the app-for-all-apps helper~
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #fe83c6;">
                            <a class="border large-button archived" href="/funny-commands-by-bunny" style="--border-colour: #fe83c6;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/funny_commands_by_bunny.webp" alt="funny commands by bunny's avatar" title="funny commands by bunny" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/funny_commands_by_bunny.webp" alt="funny commands by bunny's avatar" title="funny commands by bunny" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>funny commands by bunny 🐇</strong>
-                                 <br>
+                                 <br/>
                                  🐇 funny commands by bunny
-                              </div>
-                           </a>
-                        </div>
-                        <div class="corner-border">
-                           <a class="border large-button archived" href="/timetable-fen" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/timetable_fen.webp" alt="timetable fen's avatar" title="timetable fen" loading="lazy" draggable="false"/>
-                              <div>
-                                 <strong>timetable fen 📝</strong>
-                                 <br>
-                                 <img class="emoji inline-button-emoji" src="/assets/emoji/mutant_standard/yellow_book.webp" alt="yellow book" title=":yellow_book:" draggable="false"/>
                               </div>
                            </a>
                         </div>
@@ -264,51 +835,51 @@
                      <div class="grid">
                         <div class="corner-border" style="--border-colour: #0f87f0;">
                            <a class="border large-button" href="/berry-bot" style="--border-colour: #0f87f0;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/berry_bot.webp" alt="berry bot's avatar" title="berry bot" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/berry_bot.webp" alt="berry bot's avatar" title="berry bot" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>berry bot 🫐</strong>
-                                 <br>
+                                 <br/>
                                  🫐 Gentle Berry's Server 2018-2022 🕯️
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #4de94c;">
                            <a class="border large-button" href="/flooded-area-bot" style="--border-colour: #4de94c;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>flooded area bot 🌊</strong>
-                                 <br>
+                                 <br/>
                                  🌊 flooded area community's discord bot
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #4815aa;">
                            <a class="border large-button" href="/halowo-levels" style="--border-colour: #4815aa;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." loading="lazy" draggable="false"/>
                               <div>
                                  <strong>greg. 🦎</strong>
-                                 <br>
+                                 <br/>
                                  🦎 i greg.
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #3498db;">
                            <a class="border large-button" href="/mintbubblex" style="--border-colour: #3498db;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>MintBubblex 🍭</strong>
-                                 <br>
+                                 <br/>
                                  🍭 verification app for Aethen's Social Area
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #3498db;">
-                           <a class="border large-button" href="/friends-smp" style="--border-colour: #3498db;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/friends_smp.webp" alt="friends smp' avatar" title="friends' smp" loading="lazy" draggable="false"/>
+                           <a class="border large-button" href="/friends-smp-app" style="--border-colour: #3498db;" draggable="false">
+                              <video class="emoji circle-border" src="/assets/avatar/friends_smp_app.mp4" title="friends' smp" draggable="false" autoplay loop muted></video>
                               <div>
                                  <strong>friends' smp</strong>
-                                 <br>
-                                 <img class="emoji inline-button-emoji" src="/assets/avatar/friends_smp.webp" alt="friends smp' avatar" title="friends' smp" style="border-radius: 100%;" loading="lazy" draggable="false"/>
+                                 <br/>
+                                 <img class="emoji circle-border inline-button-emoji" src="/assets/emoji/other/friends_smp.webp" alt="friends' smp's icon" title="friends' smp" loading="lazy" draggable="false"/>
                                  an app representing the smp
                               </div>
                            </a>
@@ -317,35 +888,35 @@
                            <a class="border large-button" href="/the-universe-bot" style="--border-colour: #401f91;" draggable="false">
                               <div>
                                  <strong>the universe bot 🌌</strong>
-                                 <br>
+                                 <br/>
                                  🌌 universe laboratories' discord bot
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #4de94c;">
                            <a class="border large-button archived" href="/shadows-community-bot" style="--border-colour: #4de94c;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/shadows_community_bot.webp" alt="Shadow's Community Bot's avatar" title="Shadow's Community Bot" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/shadows_community_bot.webp" alt="Shadow's Community Bot's avatar" title="Shadow's Community Bot" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>Shadow's Community Bot</strong>
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #43c4cd;">
-                           <a class="border large-button archived" href="/bun" style="--border-colour: #43c4cd;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/transport_handbook.webp" alt="aviflight558's avatar" title="aviflight558" loading="lazy" draggable="false"/>
+                           <a class="border large-button archived" href="/aviflight558" style="--border-colour: #43c4cd;" draggable="false">
+                              <img class="emoji circle-border" src="/assets/avatar/transport_handbook.webp" alt="aviflight558's avatar" title="aviflight558" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>aviflight558</strong>
-                                 <br>
+                                 <br/>
                                  ✈️ awesome discord plane bot
                               </div>
                            </a>
                         </div>
                         <div class="corner-border" style="--border-colour: #003eff;">
                            <a class="border large-button archived" href="/the-lobster-bot" style="--border-colour: #003eff;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/the_lobster_bot.webp" alt="The Lobster Bot's avatar" title="The Lobster Bot" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/the_lobster_bot.webp" alt="The Lobster Bot's avatar" title="The Lobster Bot" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>The Lobster Bot</strong>
-                                 <br>
+                                 <br/>
                                  🦞 awesome custom bot for Mighty Lobster [OFFICIAL]
                               </div>
                            </a>
@@ -354,7 +925,7 @@
                            <a class="border large-button archived" href="/king-doge" style="--border-colour: #c653ff;" draggable="false">
                               <div>
                                  <strong>king doge</strong>
-                                 <br>
+                                 <br/>
                                  🪙
                               </div>
                            </a>
@@ -368,19 +939,11 @@
                      <div class="grid">
                         <div class="corner-border" style="--border-colour: #ff0000;">
                            <a class="border large-button archived" href="https://outcast.outcastcorp.xyz" style="--border-colour: #ff0000;" target="_blank" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/outcast.webp" alt="Outcast's avatar" title="Outcast" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/outcast.webp" alt="Outcast's avatar" title="Outcast" loading="lazy" draggable="false"/>
                               <div>
                                  <strong>Outcast</strong>
-                                 <br>
+                                 <br/>
                                  An all-in-one Discord bot.
-                              </div>
-                           </a>
-                        </div>
-                        <div class="corner-border" style="--border-colour: #c653ff;">
-                           <a class="border large-button archived" href="/farids-cafe" style="--border-colour: #c653ff;" draggable="false">
-                              <img class="emoji avatar" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" loading="lazy" draggable="false"/>
-                              <div>
-                                 <strong>farid's cafe</strong>
                               </div>
                            </a>
                         </div>
@@ -410,20 +973,20 @@
                      <div class="grid">
                         <div class="corner-border">
                            <a class="border large-button" href="https://github.com/magicalbunny31/awesome-utility-stuff" target="_blank" draggable="false">
-                              <img class="emoji" src="/assets/emoji/mutant_standard/package.webp" alt="package" title=":package:" loading="lazy" draggable="false"/>
+                              <img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/>
                               <div>
                                  <strong>@magicalbunny31/awesome-utility-stuff</strong>
-                                 <br>
+                                 <br/>
                                  🐾some awesome utilities that i pretty much need or else my code will suck
                               </div>
                            </a>
                         </div>
                         <div class="corner-border">
                            <a class="border large-button" href="https://github.com/magicalbunny31/fennec-utilities" target="_blank" draggable="false">
-                              <img class="emoji" src="/assets/emoji/mutant_standard/package.webp" alt="package" title=":package:" loading="lazy" draggable="false"/>
+                              <img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/>
                               <div>
                                  <strong>@magicalbunny31/fennec-utilities</strong>
-                                 <br>
+                                 <br/>
                                  💻 utility package for interacting with fennec
                               </div>
                            </a>
@@ -441,6 +1004,9 @@
                         <img class="emoji" src="/assets/emoji/mutant_standard/globe.webp" alt="globe" title=":globe:" draggable="false"/>
                         other places to find my code
                      </h1>
+                     <ul>
+                        <li>these odd tidbits of scripts would probably be worthless to you..</li>
+                     </ul>
 
                      <div class="grid">
                         <div class="corner-border" style="--border-colour: #171515;">
@@ -448,7 +1014,7 @@
                               <img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/>
                               <div>
                                  <strong>github gist</strong>
-                                 <br>
+                                 <br/>
                                  magicalbunny31
                               </div>
                            </a>
@@ -458,7 +1024,7 @@
                               <img class="emoji" src="/assets/logo/glitch.png" alt="glitch logo" title="glitch" draggable="false"/>
                               <div>
                                  <strong>glitch</strong>
-                                 <br>
+                                 <br/>
                                  magicalbunny31
                               </div>
                            </a>
@@ -550,14 +1116,14 @@
                   </a>
 
                   <a href="https://outcast.red" target="_blank">
-                     <img style="border-radius: 100%; float: right; margin-right: 0.5em; width: 2em; " src="/assets/logo/outcast.png" draggable="false"/>
+                     <img class="circle-border" style="float: right; margin-right: 0.5em; width: 2em; " src="/assets/logo/outcast.png" draggable="false"/>
                   </a>
 
 
                   <div class="info">
                      <p>
                         <a class="footer-item" id="splash"></a>
-                        <br>
+                        <br/>
                         <a class="footer-item modal-button" id="info">info</a>
                         |
                         <a class="footer-item modal-button" id="attribution">attribution</a>

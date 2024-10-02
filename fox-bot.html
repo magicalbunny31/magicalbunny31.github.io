@@ -31,6 +31,11 @@
       <script src="/assets/script/modal.js"></script>
 
       <style>
+         #introduction-buttons {
+            margin-top: 1em;
+            padding-right: 1em;
+         }
+
          .row {
             display: flex;
             gap: 0.2em;
@@ -41,6 +46,12 @@
             flex-direction: column;
             flex: 25%;
             gap: 0.2em;
+         }
+
+         @media only screen and (max-width: 750px) {
+            #introduction-buttons {
+               padding-right: 0 !important;
+            }
          }
       </style>
 
@@ -71,15 +82,11 @@
                         <img class="emoji" src="/assets/emoji/mutant_standard/fox.webp" alt="fox" title=":fox:" draggable="false"/>
                         fox bot 🦊
                      </h1>
-                     <ul>
-                        <li>
-                           <em>your discord bot for foxes~</em> ✨
-                        </li>
-                     </ul>
+                     <p>your discord bot for foxes~ ✨</p>
 
-                     <div class="grid" style="padding: 0.2em 0;">
+                     <div class="grid" id="introduction-buttons">
                         <div class="corner-border" style="--border-colour: #5865F2;">
-                           <a class="border large-button" href="https://discord.com/application-directory/964619726888239255/privacy" target="_blank" style="--border-colour: #5865F2;" draggable="false">
+                           <a class="border large-button" href="https://discord.com/application-directory/964619726888239255" target="_blank" style="--border-colour: #5865F2;" draggable="false">
                               <img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/>
                               <div>
                                  <strong>add app</strong>
@@ -88,11 +95,27 @@
                               </div>
                            </a>
                         </div>
+                        <div class="corner-border">
+                           <a class="border large-button" href="/dev#fox-bot" draggable="false">
+                              <img class="emoji" src="/assets/emoji/mutant_standard/robot.webp" alt="robot" title=":robot:" draggable="false"/>
+                              <div>
+                                 <strong>dev and apps</strong>
+                                 <br/>
+                                 <img class="emoji circle-border inline-button-emoji" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/>
+                                 fox bot
+                              </div>
+                           </a>
+                        </div>
                      </div>
 
-                     <div class="media-corner-border">
+                     <div class="media-corner-border" style="margin-top: 1em;">
                         <img class="border" src="/assets/banner/fox_bot.webp" alt="the fox in fox bot's avatar's legs" title="fox bot" draggable="false" loading="lazy"/>
                      </div>
+
+                     <p style="font-size: 0.75em; margin-top: 0.75em;">
+                        bot avatar and banner by
+                        <a href="https://www.instagram.com/aviation558_" target="_blank"><img class="emoji" src="/assets/logo/instagram.png" alt="instagram logo" title="instagram" draggable="false"/> @aviation558_</a>
+                     </p>
 
                   </div>
                </div>
@@ -204,30 +227,30 @@
                      <div class="row">
                         <div class="column">
                            <div class="media-corner-border">
-                              <a href="/assets/discord/application-directory/legacy_fox.png" target="_blank">
-                                 <img class="border" src="/assets/discord/application-directory/legacy_fox.png" alt="" title="" draggable="false" loading="lazy"/>
+                              <a href="/assets/discord/app-images/fox-bot/legacy_fox.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fox-bot/legacy_fox.png" alt="" title="" draggable="false" loading="lazy"/>
                               </a>
                            </div>
                            <div class="media-corner-border">
-                              <a href="/assets/discord/application-directory/legacy_fox-schedule-image.png" target="_blank">
-                                 <img class="border" src="/assets/discord/application-directory/legacy_fox-schedule-image.png" alt="" title="" draggable="false" loading="lazy"/>
+                              <a href="/assets/discord/app-images/fox-bot/legacy_fox-schedule-image.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fox-bot/legacy_fox-schedule-image.png" alt="" title="" draggable="false" loading="lazy"/>
                               </a>
                            </div>
                         </div>
                         <div class="column">
                            <div class="media-corner-border">
-                              <a href="/assets/discord/application-directory/legacy_hourly-fox-schedules.png" target="_blank">
-                                 <img class="border" src="/assets/discord/application-directory/legacy_hourly-fox-schedules.png" alt="" title="" draggable="false" loading="lazy"/>
+                              <a href="/assets/discord/app-images/fox-bot/legacy_hourly-fox-schedules.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fox-bot/legacy_hourly-fox-schedules.png" alt="" title="" draggable="false" loading="lazy"/>
                               </a>
                            </div>
                            <div class="media-corner-border">
-                              <a href="/assets/discord/application-directory/legacy_daily-fox-schedules.png" target="_blank">
-                                 <img class="border" src="/assets/discord/application-directory/legacy_daily-fox-schedules.png" alt="" title="" draggable="false" loading="lazy"/>
+                              <a href="/assets/discord/app-images/fox-bot/legacy_daily-fox-schedules.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fox-bot/legacy_daily-fox-schedules.png" alt="" title="" draggable="false" loading="lazy"/>
                               </a>
                            </div>
                            <div class="media-corner-border">
-                              <a href="/assets/discord/application-directory/legacy_manage-schedules.png" target="_blank">
-                                 <img class="corner" src="/assets/discord/application-directory/legacy_manage-schedules.png" alt="" title="" draggable="false" loading="lazy"/>
+                              <a href="/assets/discord/app-images/fox-bot/legacy_manage-schedules.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fox-bot/legacy_manage-schedules.png" alt="" title="" draggable="false" loading="lazy"/>
                               </a>
                            </div>
                         </div>
@@ -261,7 +284,7 @@
                         </div>
                         <div class="corner-border">
                            <a class="border button disabled" draggable="false">
-                              <img class="emoji" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" style="border-radius: 100%;" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/>
                               <em><strong>fox bot 🦊</strong></em> ✨
                            </a>
                         </div>

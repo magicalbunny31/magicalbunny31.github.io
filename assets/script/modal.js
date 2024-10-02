@@ -116,6 +116,60 @@ window.addEventListener(`load`, async () => {
          </li>
       </ul>
       <h2>
+         <img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/>
+         discord icons
+      </h2>
+      <ul>
+         <li>
+            <code>creator</code> <a href="https://discord.com" target="_blank">Discord</a>
+         </li>
+         <li>
+            <code>example</code>
+            <img class="emoji" src="/assets/emoji/discord/slash_command.png" alt="slash command" title=":slash_command:" draggable="false"/>
+         </li>
+         <li>
+            <code>source</code> <a href="https://discord.com" target="_blank">https://discord.com</a>
+         </li>
+      </ul>
+      <h2>
+         <img class="emoji" src="/assets/logo/google_fonts.png" alt="google fonts logo" title="google fonts" draggable="false"/>
+         google fonts material symbols & icons
+      </h2>
+      <ul>
+         <li>
+            <code>creator</code> <a href="https://opensource.google" target="_blank">Google</a>
+         </li>
+         <li>
+            <code>license</code> <a href="https://github.com/google/material-design-icons/blob/master/LICENSE" title="Apache License Version 2.0" target="_blank">Apache-2.0</a>
+         </li>
+         <li>
+            <code>example</code>
+            <img class="emoji" src="/assets/emoji/google_material_design_icons/database.png" alt="database" title=":database:" draggable="false"/>
+         </li>
+         <li>
+            <code>source</code> <a href="https://fonts.google.com/icons" target="_blank">https://fonts.google.com/icons</a>
+         </li>
+      </ul>
+      <h2>
+         <img class="emoji" src="/assets/logo/microsoft.png" alt="microsoft logo" title="microsoft" draggable="false"/>
+         microsoft fluent emoji
+      </h2>
+      <ul>
+         <li>
+            <code>creator</code> <a href="https://opensource.microsoft.com" target="_blank">Microsoft Corporation</a>
+         </li>
+         <li>
+            <code>license</code> <a href="https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE" title="The MIT License" target="_blank">MIT</a>
+         </li>
+         <li>
+            <code>example</code>
+            <img class="emoji" src="/assets/emoji/microsoft_fluentui_emoji/lizard.png" alt="lizard" title=":lizard:" draggable="false"/>
+         </li>
+         <li>
+            <code>source</code> <a href="https://github.com/microsoft/fluentui-emoji" target="_blank">https://github.com/microsoft/fluentui-emoji</a>
+         </li>
+      </ul>
+      <h2>
          <img class="emoji" src="/assets/emoji/mutant_standard/mutant_standard.webp" alt="mutant standard emoji logo" title=":mutant_standard:" draggable="false"/>
          mutant standard emoji
       </h2>
@@ -138,7 +192,7 @@ window.addEventListener(`load`, async () => {
       </ul>
       <h2>
          <img class="emoji" src="/assets/emoji/pulexart/pulex.png" alt="pulex logo" title="pulex" draggable="false"/>
-         pulexart
+         pulexart stickers
       </h2>
       <ul>
          <li>
