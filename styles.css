@@ -145,6 +145,14 @@ a:hover:not(.button, .large-button, .footer-item) {
 
 
 
+/* images */
+
+.circle-border {
+   border-radius: 100%;
+}
+
+
+
 /* scroll anchors */
 
 html {
@@ -491,6 +499,11 @@ a img {
    height: 1.25em;
    vertical-align: middle;
    width: auto;
+}
+
+.inline-button-emoji {
+   float: none !important;
+   height: 1.25em !important;
 }
 
 
