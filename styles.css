@@ -357,7 +357,7 @@ nav {
    width: 100%;
 }
 
-.large-button img {
+.large-button img, .large-button video {
    float: left;
    height: 2em;
 }
@@ -532,7 +532,7 @@ a img {
       grid-template-columns: repeat(1, minmax(0, 1fr));
    }
 
-   img.thumbnail {
+   .thumbnail {
       width: 5em !important
    }
 
