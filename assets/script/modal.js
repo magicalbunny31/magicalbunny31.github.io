@@ -124,8 +124,10 @@ window.addEventListener(`load`, async () => {
             <code>creator</code> <a href="https://discord.com" target="_blank">Discord</a>
          </li>
          <li>
-            <code>example</code>
+            <code>examples</code>
             <img class="emoji" src="/assets/emoji/discord/slash_command.png" alt="slash command" title=":slash_command:" draggable="false"/>
+            <img class="emoji" src="/assets/emoji/discord/shapes_dancing.gif" alt="dancing shapes" title=":shapes_dancing:" draggable="false"/>
+            <img class="emoji" src="/assets/emoji/discord/controller.png" alt="controller" title=":controller:" draggable="false"/>
          </li>
          <li>
             <code>source</code> <a href="https://discord.com" target="_blank">https://discord.com</a>
