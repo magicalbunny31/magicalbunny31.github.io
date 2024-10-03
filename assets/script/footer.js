@@ -1570,7 +1570,9 @@ window.addEventListener(`load`, () => {
       `here to create something unique!`,
       `yes, i am a criminal! my crime? curiosity, nya~`,
       `"the gayer the furry, the more a threat to national security" -vio`,
-      `DAMN IT I'M DOING A BIT`
+      `DAMN IT I'M DOING A BIT`,
+      `I'M GOING TO STAB SO MANY PUMPKINS`,
+      `https://nuzzles.dev <<<<< new website !! (please go check it out i spent forever on it)`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
