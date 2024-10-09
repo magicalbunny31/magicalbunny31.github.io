@@ -56,23 +56,42 @@
          }
 
          #tutel:hover {
-            -webkit-animation: vibe 1.4s infinite;
-            -moz-animation: vibe 1.4s infinite;
-            -o-animation: vibe 1.4s infinite;
-            animation: vibe 1.4s infinite;
+            -webkit-animation: vibe 1.375s infinite;
+            -moz-animation: vibe 1.375s infinite;
+            -o-animation: vibe 1.375s infinite;
+            animation: vibe 1.375s infinite;
          }
       </style>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+
       <script>
-         window.addEventListener(`load`, () => {
-            const tutelMusic = document.getElementById(`tutel-music`);
+         
+         window.addEventListener(`load`, async () => {
+            const music = new Howl({
+               src: [ `https://files.catbox.moe/sc7fq0.ogg` ],
+               autoplay: false,
+               loop: true
+            });
+
+            let hasStartedPlayback = false;
+            let id;
+
             const tutel = document.getElementById(`tutel`);
-            tutel.onmouseenter = _event => {
-               tutelMusic.play();
+
+            tutel.onmouseenter = async () => {
+               if (hasStartedPlayback) {
+                  music.play(id);
+               } else {
+                  id = music.play();
+                  music.seek(20.625, id);
+                  hasStartedPlayback = true;
+               };
             };
-            tutel.onmouseleave = _event => {
-               tutelMusic.pause();
-            };
+
+            tutel.onmouseleave = () => {
+               music.pause(id);
+            };            
          });
       </script>
 
@@ -83,7 +102,7 @@
    <body>
 
 
-      <audio id="tutel-music" src="https://files.catbox.moe/lj3nn2.mp3#t=20.8" hidden loop preload="auto"></audio>
+      <!-- <audio id="tutel-music" src="https://files.catbox.moe/lj3nn2.mp3#t=20.8" crossorigin="anonymous" hidden loop preload="auto"></audio> -->
 
 
       <div class="centre">
