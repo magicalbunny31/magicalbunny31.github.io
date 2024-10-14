@@ -55,6 +55,33 @@
          }
       </style>
 
+      <script>
+         // this is temporary !!
+         window.addEventListener(`load`, () => {
+            const modalBackground = document.getElementById(`modal-background`);
+            const modalContent = document.getElementById(`modal-content`);
+            modalBackground.style.display = `flex`;
+            modalContent.innerHTML = `
+               <h2>
+                  <img class="emoji" src="/assets/emoji/mutant_standard/stop_sign.webp" alt="stop sign" title=":stop_sign:" draggable="false"/>
+                  this page represents future content
+               </h2>
+               <ul>
+                  <li>you're about to view the page representing fox bot 🦊's next major update!</li>
+                  <ul>
+                     <li>exciting, right?!</li>
+                  </ul>
+                  <li>
+                     anyway, stuff here may not be finalised and
+                     <em>will</em>
+                     be updated as fox bot 🦊 is developed~
+                  </li>
+                  <li>got that? kewl! you can close this modal as a sign that you've acknowledged this warning..</li>
+               </ul>
+            `;
+         });
+      </script>
+
 
    </head>
 
