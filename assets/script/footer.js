@@ -1572,7 +1572,16 @@ window.addEventListener(`load`, () => {
       `"the gayer the furry, the more a threat to national security" -vio`,
       `DAMN IT I'M DOING A BIT`,
       `I'M GOING TO STAB SO MANY PUMPKINS`,
-      `https://nuzzles.dev <<<<< new website !! (please go check it out i spent forever on it)`
+      `https://nuzzles.dev <<<<< new website !! (please go check it out i spent forever on it)`,
+      `FIVE, FOUR, THREE, 6-2-1!`,
+      `ANY TORTURE I INFLICT IS 100% ACCIDENTAL! LIKE ANY GOOD WAR CRIMINAL!`,
+      `one of you is in the right place at the right time....you just don't know it yet`,
+      `not only am i cooked, i am fucking flambéed`,
+      `campaign for a free internet`,
+      `i'm so impressed by your lack of finesse, no duress; i digress`,
+      `i'm going to get bread`,
+      `oh yeah i'm also going to get ##################################################################################################`,
+      `a furry relationship is gayer than a gay relationship`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
