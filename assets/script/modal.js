@@ -4,16 +4,17 @@ window.addEventListener(`load`, async () => {
    modalObject.id = `modal-background`;
    modalObject.innerHTML = `
       <div id="modal">
+
          <div class="large-corner-border">
             <div class="large-border box">
 
 
                <table style="border-collapse: collapse; height: 100%; width: 100%">
-               
+
                   <tr>
                      <td valign="top">
                         <span id="modal-content">
-                     
+
                         </span>
                      </td>
                   </tr>
@@ -32,7 +33,7 @@ window.addEventListener(`load`, async () => {
                         </div>
                      </td>
                   </tr>
-               
+
 
                </table>
 
@@ -262,7 +263,6 @@ window.addEventListener(`load`, async () => {
 
 
    // when the user clicks out of the modal, close the modal
-   const modal = document.getElementById(`modal`);
    window.onclick = event => {
       if (event.target == modalBackground)
          modalBackground.style.display = `none`;
