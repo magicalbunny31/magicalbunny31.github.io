@@ -134,6 +134,32 @@ code {
    padding: 0 0.2em;
 }
 
+time {
+   background: hsla(0, 0%, 0%, 0.075);
+   border: 1px solid hsla(0, 0%, 0%, 0.10);
+   border-radius: 4px;
+   padding: 0 0.2em;
+   position: relative;
+}
+
+time .popup {
+   background-color: #e6e6e6;
+   border: 1px solid hsla(0, 0%, 0%, 0.10);
+   border-radius: 4px;
+   bottom: 1.5em;
+   display: none;
+   margin: 0 calc(-1px - 0.2em);
+   padding: 0 0.2em;
+   position: absolute;
+   visibility: hidden;
+}
+
+time:hover .popup {
+   display: inline;
+   visibility: visible;
+   width: max-content;
+}
+
 .corner-border:has(> .button:hover), .corner-border:has(> .large-button:hover), .media-corner-border:has(> a:hover) {
    scale: 110%;
    filter: brightness(90%);
