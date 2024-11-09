@@ -16,6 +16,7 @@ https://nuzzles.dev/about/deerie
 https://nuzzles.dev/art
 https://nuzzles.dev/dev
 https://nuzzles.dev/dev/aviflight558
+https://nuzzles.dev/dev/aviflight558/github
 https://nuzzles.dev/dev/berry-bot
 https://nuzzles.dev/dev/berry-bot/github
 https://nuzzles.dev/dev/bun
