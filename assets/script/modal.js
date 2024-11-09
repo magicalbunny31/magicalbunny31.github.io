@@ -48,13 +48,8 @@ window.addEventListener(`load`, async () => {
 
 
    // api requests for the modal content
-   const file = window.location.pathname.split(`/`).pop() || `index`;
-   const filename = file.endsWith(`.html`)
-      ? file
-      : `${file}.html`;
-
    const [ pageCommitSha, pageCommitMessage, pageLastUpdated ] = await (async () => {
-      const response = await fetch(`https://api.github.com/repos/magicalbunny31/magicalbunny31.github.io/commits?path=${filename}` , {
+      const response = await fetch(`https://api.github.com/repos/magicalbunny31/magicalbunny31.github.io/commits?path=${path}` , {
          headers: {
             "User-Agent": `nuzzles.dev (https://github.com/magicalbunny31/magicalbunny31.github.io)`
          }

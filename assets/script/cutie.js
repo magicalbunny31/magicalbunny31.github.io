@@ -10,10 +10,10 @@ window.addEventListener(`load`, () => {
    if (button)
       button.onclick = (() => {
          button.className += ` disabled`;
-         button.style = `background-color: #d6a4db;pointer-events: none;--border-colour: #fe83c6;`;
+         button.style = `--border-colour: #fe83c6; background-color: #d6a4db; pointer-events: none;`;
          button.parentElement.style = `--border-colour: #fe83c6;`
          const img = document.querySelector(`#cutie img`);
-         img.src = `./assets/emoji/pulexart/happ.png`;
+         img.src = `/assets/emoji/pulexart/happ.png`;
          img.alt = `smiling fox`;
          img.title = `:happ:`;
          document.querySelector(`#cutie strong`).outerHTML = `<em><b>you're cute now !</b></em> ✨`;

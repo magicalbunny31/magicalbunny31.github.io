@@ -1581,7 +1581,40 @@ window.addEventListener(`load`, () => {
       `i'm so impressed by your lack of finesse, no duress; i digress`,
       `i'm going to get bread`,
       `oh yeah i'm also going to get ##################################################################################################`,
-      `a furry relationship is gayer than a gay relationship`
+      `a furry relationship is gayer than a gay relationship`,
+      `the typhlosion (and rapidash, ursaring, slaking, octilery, and lapras) situation is crazy`,
+      `i bet he's the type of guy to cancel a doctor's appointment because he's sick`,
+      `sorry ladies i suck dick`,
+      `ooh! breakable waist~`,
+      `ghosts are scary because they can go through walls and stuff! ..wait that's not allowed SOMEBODY ARREST THEM`,
+      `BY THE POWER OF SERVICE TOP AND POWER BOTTOM`,
+      `on one paw, i can fill a hole! UWU`,
+      `ERECTION!...fuck i meant objection`,
+      `OBJECTION! YOU'RE CUTE!`,
+      `where did you get all that money for this commission?`,
+      `get used to seeing me from down below because only on top is where i'll be`,
+      `i thought tops were an extinct species`,
+      `the key around my neck? it can be for you if you behave`,
+      `this is a specialised charging port i tore off-- uh, i mean: legitimately acquired off of a spaceship!`,
+      `don't make a softcore gay porno for class`,
+      `if it takes my death, then so be it: you will not defeat us!`,
+      `remember that a fox can smell a bluff from a mile away~`,
+      `GET OUT OF MY CAR`,
+      `my canines are out for ur paws to slip in`,
+      `is it ever smart to kill your own chess piece..?`,
+      `PUP PAWMAT`,
+      `happ howloween !`,
+      `i am absolutely awesome (agree or die)`,
+      `woof woof, bark bark, puppy lasagna`,
+      `WILD ANIMAL PARTY`,
+      `puppy destim cage corner`,
+      `the city bunny is disgusted at pretentious people`,
+      `I PRESENT TO YOU.... PRE-CRACKED EGGS!`,
+      `today is for painting yiff`,
+      `i bring a sort of "being a dog" vibe to the gender that humans really don't like`,
+      `it's no noise november everyone shut the fuck up`,
+      `what the bark`,
+      `we're going on an, inter-city~ 🎶`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
@@ -1598,11 +1631,6 @@ window.addEventListener(`load`, () => {
 
 
    // edit the page sauce link to the correct github page
-   const file = window.location.pathname.split(`/`).pop() || `index`;
-   const filename = file.endsWith(`.html`)
-      ? file
-      : `${file}.html`;
-
    const pageSauce = document.getElementById(`page-sauce`);
-   pageSauce.href = `https://github.com/magicalbunny31/magicalbunny31.github.io/blob/main/${filename}`;
+   pageSauce.href = `https://github.com/magicalbunny31/magicalbunny31.github.io/blob/main/${path}`;
 });
