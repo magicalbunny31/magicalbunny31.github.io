@@ -37,6 +37,7 @@ https://nuzzles.dev/dev/mintbubblex/github
 https://nuzzles.dev/dev/pawesome-utility-stuffs
 https://nuzzles.dev/dev/shadows-community-bot
 https://nuzzles.dev/dev/the-lobster-bot
+https://nuzzles.dev/dev/the-lobster-bot/github
 https://nuzzles.dev/dev/the-universe-bot
 https://nuzzles.dev/dev/the-universe-bot/github
 https://nuzzles.dev/dev/transport-handbook
