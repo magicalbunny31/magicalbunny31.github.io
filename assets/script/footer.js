@@ -1614,7 +1614,8 @@ window.addEventListener(`load`, () => {
       `i bring a sort of "being a dog" vibe to the gender that humans really don't like`,
       `it's no noise november everyone shut the fuck up`,
       `what the bark`,
-      `we're going on an, inter-city~ 🎶`
+      `we're going on an, inter-city~ 🎶`,
+      `there's a million GRUESOME ways to DIE!`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
