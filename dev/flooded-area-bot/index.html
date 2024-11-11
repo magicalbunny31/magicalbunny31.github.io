@@ -59,7 +59,7 @@
       <script>
          window.addEventListener(`load`, () => {
             const hash = window.location.hash.slice(1);
-            const buttonId = [ `images-the-killer` ].includes(hash)
+            const buttonId = [ `images-flooded-area-moderation` ].includes(hash)
                ? hash
                : `images-flooded-area-bot`;
 
@@ -79,7 +79,7 @@
 
          window.addEventListener(`hashchange`, hashChangeEvent => {
             const oldHash = hashChangeEvent.oldURL.split(`#`).at(-1);
-            const oldButtonId = [ `images-the-killer` ].includes(oldHash)
+            const oldButtonId = [ `images-flooded-area-moderation` ].includes(oldHash)
                ? oldHash
                : `images-flooded-area-bot`;
 
@@ -90,7 +90,7 @@
             oldButtonText.innerHTML = `<strong>${oldButtonText.innerText}</strong>`;
 
             const newHash = hashChangeEvent.newURL.split(`#`).at(-1);
-            const newButtonId = [ `images-the-killer` ].includes(newHash)
+            const newButtonId = [ `images-flooded-area-moderation` ].includes(newHash)
                ? newHash
                : `images-flooded-area-bot`;
 
@@ -140,15 +140,15 @@
 
                      <div class="grid" id="introduction-buttons">
                         <div class="corner-border">
-                           <a class="border large-button" href="/dev#flooded-area-bot-and-the-killer" draggable="false">
+                           <a class="border large-button" href="/dev#flooded-area-bot-and-flooded-area-moderation" draggable="false">
                               <img class="emoji" src="/assets/emoji/mutant_standard/robot.webp" alt="robot" title=":robot:" draggable="false"/>
                               <div>
                                  <strong>dev and apps</strong>
                                  <br/>
                                  <img class="emoji circle-border inline-button-emoji" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" draggable="false"/>
                                  flooded area bot and
-                                 <img class="emoji circle-border inline-button-emoji" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" draggable="false"/>
-                                 the killer
+                                 <img class="emoji circle-border inline-button-emoji" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" draggable="false"/>
+                                 flooded area moderation
                               </div>
                            </a>
                         </div>
@@ -644,43 +644,57 @@
                      <hr/>
 
                      <div class="media-corner-border">
-                        <img class="border thumbnail" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" draggable="false"/>
+                        <img class="border thumbnail" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" draggable="false"/>
                      </div>
 
-                     <h2 id="the-killer">
-                        the killer
+                     <h2 id="flooded-area-moderation">
+                        flooded area moderation 🤖
                      </h2>
                      <p>
-                        the killer 🤖 is an app which allows for
+                        flooded area moderation 🤖 is an app which allows for
                         <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
-                        moderation to take place straight from the
+                        moderation to take place from the
                         <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>
                         <br/>
                         <br/>
-                        it is feature-rich way for
+                        it is a feature-rich way for the
                         <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
-                        to (mass-)moderate players, involving: (temporary) bans; kicks; and revoke bans
+                        staff to (mass-)moderate players straight from the discord server without needing to join in-game, through the
+                        <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
                      </p>
 
                      <h3>
-                        🛠️ how the killer 🤖 works
+                        🛠️ how flooded area moderation 🤖 works
                      </h3>
                      <ul>
                         <li>
-                           the killer 🤖 uses the
-                           <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
-                           to remotely ban and
-                           <a href="https://create.roblox.com/docs/reference/cloud/messaging-service/v1" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> send messages</a>
-                           across for other moderation functions
+                           flooded area moderation 🤖 uses the
+                           <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>'s
+                           <a href="https://create.roblox.com/docs/cloud/reference/UserRestriction" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> user restriction</a>
+                           resource to remotely ban players
+                        </li>
+                        <li>
+                           it also includes using its own ban history
+                           (in addition to the
+                           <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> open cloud</a>'s
+                           <a href="https://create.roblox.com/docs/cloud/reference/UserRestriction#List-User-Restriction-Logs" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> list user restriction logs</a>)
+                           which mainly exists to support previous bans prior to the addition of user restrictions
+                        </li>
+                        <li>
+                           using the
+                           <a href="https://blox.link/dashboard/user/developer" target="_blank">bloxlink api</a>
+                           (what the server already uses) it's also able to map its functions to the
+                           <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>:
+                           like adding roles to banned players in the server or banning a members's bloxlink linked roblox account
                         </li>
                      </ul>
 
                      <h3>
-                        🌫️ what the killer 🤖 was built off of
+                        🌫️ what flooded area moderation 🤖 was built off of
                      </h3>
                      <ul>
                         <li>
-                           the killer 🤖 is a fork of
+                           flooded area moderation 🤖 was a fork of
                            <a href="https://stratiz.net" target="_blank">stratiz</a>'s
                            <a href="https://github.com/Stratiz/Discord-To-Roblox"><img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/> discord-to-roblox code</a>,
                            added to
@@ -691,16 +705,16 @@
                         <li>
                            it has since been re-written by me and re-developed to use the
                            <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
-                           for improved reliability with the help of
+                           (see above) for improved reliability: with the help of
                            <a href="https://halodev.games" target="_blank"><img class="emoji" src="/assets/logo/halodev_games.png" alt="halodev games logo" title="halodev games" draggable="false"/> ActuallyHalowo</a>
                         </li>
                      </ul>
 
                      <h3>
-                        💻 the killer 🤖 is source-available!
+                        💻 flooded area moderation 🤖 is source-available!
                      </h3>
                      <ul>
-                        <li>the source code of the killer 🤖 can be viewed on github: button below~</li>
+                        <li>the source code of flooded area moderation 🤖 can be viewed on github: button below~</li>
                      </ul>
 
                      <div class="grid">
@@ -715,6 +729,15 @@
                            </a>
                         </div>
                      </div>
+
+                     <div class="media-corner-border" id="banner-border" style="margin-top: 1em;">
+                        <img class="border"  src="/assets/banner/flooded_area_moderation.webp" alt="a magma ocean background with blocky parts floating and in the air falling" title="flooded area moderation" draggable="false" loading="lazy"/>
+                     </div>
+
+                     <p style="font-size: 0.75em; margin-top: 0.75em;">
+                        bot avatar and banner by
+                        <a href="https://twitter.com/hi_itsBlizzard" target="_blank"><img class="emoji" src="/assets/logo/twitter.png" alt="twitter logo" title="twitter" draggable="false"/> @hi_itsBlizzard</a>
+                     </p>
 
                   </div>
                </div>
@@ -740,10 +763,10 @@
                               </a>
                            </div>
                            <div class="corner-border tab-item" style="--border-colour: #bc1922;">
-                              <a class="border button" id="images-the-killer" href="#images-the-killer" style="--border-colour: #bc1922; --disabled-colour: #2b393b;" draggable="false">
-                                 <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" loading="lazy" draggable="false"/>
+                              <a class="border button" id="images-flooded-area-moderation" href="#images-flooded-area-moderation" style="--border-colour: #bc1922; --disabled-colour: #2b393b;" draggable="false">
+                                 <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" loading="lazy" draggable="false"/>
                                  <div>
-                                    <strong>the killer</strong>
+                                    <strong>flooded area moderation</strong>
                                  </div>
                               </a>
                            </div>
@@ -846,20 +869,20 @@
 
                         </div>
 
-                        <div class="content" id="images-the-killer-content">
+                        <div class="content" id="images-flooded-area-moderation-content">
 
                            <div class="row">
                               <div class="column">
                                  <div class="media-corner-border">
-                                    <a href="/assets/discord/app-images/the-killer/help.png" target="_blank">
-                                       <img class="border" src="/assets/discord/app-images/the-killer/help.png" alt="" title="" draggable="false" loading="lazy"/>
+                                    <a href="/assets/discord/app-images/flooded-area-moderation/help.png" target="_blank">
+                                       <img class="border" src="/assets/discord/app-images/flooded-area-moderation/help.png" alt="" title="" draggable="false" loading="lazy"/>
                                     </a>
                                  </div>
                               </div>
                               <div class="column">
                                  <div class="media-corner-border">
-                                    <a href="/assets/discord/app-images/the-killer/tempban.png" target="_blank">
-                                       <img class="border" src="/assets/discord/app-images/the-killer/tempban.png" alt="" title="" draggable="false" loading="lazy"/>
+                                    <a href="/assets/discord/app-images/flooded-area-moderation/tempban.png" target="_blank">
+                                       <img class="border" src="/assets/discord/app-images/flooded-area-moderation/tempban.png" alt="" title="" draggable="false" loading="lazy"/>
                                     </a>
                                  </div>
                               </div>

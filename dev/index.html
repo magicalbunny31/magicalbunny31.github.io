@@ -63,7 +63,7 @@
 
          window.addEventListener(`load`, () => {
             const hash = window.location.hash.slice(1);
-            const buttonId = [ `nuzzles.dev`, `flooded-area-bot-and-the-killer`, `halowo-levels`, `mintbubblex` ].includes(hash)
+            const buttonId = [ `nuzzles.dev`, `flooded-area-bot-and-flooded-area-moderation`, `halowo-levels`, `mintbubblex` ].includes(hash)
                ? hash
                : `fox-bot`;
 
@@ -83,7 +83,7 @@
 
          window.addEventListener(`hashchange`, hashChangeEvent => {
             const oldHash = hashChangeEvent.oldURL.split(`#`).at(-1);
-            const oldButtonId = [ `nuzzles.dev`, `flooded-area-bot-and-the-killer`, `halowo-levels`, `mintbubblex` ].includes(oldHash)
+            const oldButtonId = [ `nuzzles.dev`, `flooded-area-bot-and-flooded-area-moderation`, `halowo-levels`, `mintbubblex` ].includes(oldHash)
                ? oldHash
                : `fox-bot`;
 
@@ -94,7 +94,7 @@
             oldButtonText.innerHTML = `<strong>${oldButtonText.innerText}</strong>`;
 
             const newHash = hashChangeEvent.newURL.split(`#`).at(-1);
-            const newButtonId = [ `nuzzles.dev`, `flooded-area-bot-and-the-killer`, `halowo-levels`, `mintbubblex` ].includes(newHash)
+            const newButtonId = [ `nuzzles.dev`, `flooded-area-bot-and-flooded-area-moderation`, `halowo-levels`, `mintbubblex` ].includes(newHash)
                ? newHash
                : `fox-bot`;
 
@@ -296,10 +296,10 @@
                               </a>
                            </div>
                            <div class="corner-border tab-item" style="--border-colour: #4de94c;">
-                              <a class="border button" id="flooded-area-bot-and-the-killer" href="#flooded-area-bot-and-the-killer" style="--border-colour: #4de94c; --disabled-colour: #149f14;" draggable="false">
+                              <a class="border button" id="flooded-area-bot-and-flooded-area-moderation" href="#flooded-area-bot-and-flooded-area-moderation" style="--border-colour: #4de94c; --disabled-colour: #149f14;" draggable="false">
                                  <img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
                                  <div>
-                                    <strong>flooded area bot and the killer</strong>
+                                    <strong>flooded area bot and flooded area moderation</strong>
                                  </div>
                               </a>
                            </div>
@@ -454,7 +454,7 @@
 
                         </div>
 
-                        <div class="content" id="flooded-area-bot-and-the-killer-content">
+                        <div class="content" id="flooded-area-bot-and-flooded-area-moderation-content">
 
                            <div class="media-corner-border">
                               <img class="border thumbnail" src="/assets/game/flooded_area_game_icon.webp" alt="flooded area icon" title="flooded area" draggable="false"/>
@@ -463,8 +463,8 @@
                            <h2>
                               <img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" loading="lazy" draggable="false"/>
                               flooded area bot and
-                              <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" loading="lazy" draggable="false"/>
-                              the killer
+                              <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" loading="lazy" draggable="false"/>
+                              flooded area moderation
                            </h2>
       
                            <p style="font-size: 0.75em; margin-top: -1em; margin-left: 2.5em;">
@@ -503,30 +503,29 @@
                                  <li>interactive ways for viewing game information: condensing and ordering text using interaction components or setting them out nicer using colourful embeds</li>
                               </ul>
                               <li>
-                                 <a href="/dev/flooded-area-moderation"><img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" draggable="false"/> the killer</a>
+                                 <a href="/dev/flooded-area-moderation"><img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" draggable="false"/> flooded area moderation</a>
                                  is a
                                  <a href="https://discord.com/developers/docs/quick-start/overview-of-apps" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord app</a>
-                                 which (also) brings new features to the
-                                 to take place from the
+                                 which allows for
+                                 <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
+                                 moderation to take place from the
                                  <a href="https://discord.com/servers/flooded-area-community-977254354589462618" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> flooded area community</a>
                               </li>
                               <li>
                                  features
-                                 <a href="/dev/flooded-area-moderation"><img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="flooded area bot" draggable="false"/> the killer</a>
+                                 <a href="/dev/flooded-area-moderation"><img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area bot" draggable="false"/> flooded area moderation</a>
                                  app brings to the server includes:</li>
                               <ul>
                                  <li>
                                     a feature-rich way for the
                                     <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
-                                    staff to (mass-)moderate players, involving: (temporary) bans; kicks; and revoke bans, straight from the discord server without needing to join in-game through the
+                                    staff to (mass-)moderate players straight from the discord server without needing to join in-game, through the
                                     <a href="https://create.roblox.com/docs/cloud/reference" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> roblox open cloud api</a>
                                  </li>
                                  <li>
-                                    <s>
-                                       giving the
-                                       <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
-                                       staff an easy way to search up the moderation history for the players
-                                    </s>
+                                    providing the
+                                    <a href="https://www.roblox.com/games/3976767347/Flooded-Area" target="_blank"><img class="emoji" src="/assets/logo/roblox.png" alt="roblox logo" title="roblox" draggable="false"/> flooded area</a>
+                                    staff an easy to look-up moderation history of a flooded area player by monitoring the moderation's logging channel
                                  </li>
                               </ul>
                            </ul>
@@ -544,9 +543,9 @@
                               </div>
                               <div class="corner-border" style="--border-colour: #bc1922;">
                                  <a class="border large-button" href="/dev/flooded-area-moderation" style="--border-colour: #bc1922;" draggable="false">
-                                    <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" loading="lazy" draggable="false"/>
+                                    <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" loading="lazy" draggable="false"/>
                                     <div>
-                                       <strong>the killer</strong>
+                                       <strong>flooded area moderation</strong>
                                        <br/>
                                        🤖 in-game moderation for flooded area community
                                     </div>
@@ -862,9 +861,9 @@
                         </div>
                         <div class="corner-border" style="--border-colour: #bc1922;">
                            <a class="border large-button" href="/dev/flooded-area-moderation" style="--border-colour: #bc1922;" draggable="false">
-                              <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" loading="lazy" draggable="false"/>
+                              <img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="flooded area moderation's avatar" title="flooded area moderation" loading="lazy" draggable="false"/>
                               <div>
-                                 <strong>the killer</strong>
+                                 <strong>flooded area moderation</strong>
                                  <br/>
                                  🤖 in-game moderation for flooded area community
                               </div>
