@@ -45,6 +45,6 @@ https://nuzzles.dev/dev/transport-handbook
 https://nuzzles.dev/dev/privacy
 https://nuzzles.dev/dev/status
 https://nuzzles.dev/dev/terms
-https://nuzzles.dev/dev/games
-https://nuzzles.dev/dev/games/fe2
-https://nuzzles.dev/dev/games/gentleberry16-gerek
+https://nuzzles.dev/games
+https://nuzzles.dev/games/fe2
+https://nuzzles.dev/games/gentleberry16-gerek
