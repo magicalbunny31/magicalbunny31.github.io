@@ -1,6 +1,6 @@
 https://nuzzles.dev
-https://nuzzles.dev/bluesky-deerie
 https://nuzzles.dev/bluesky
+https://nuzzles.dev/bluesky/deerie
 https://nuzzles.dev/bun-daily-fox
 https://nuzzles.dev/discord
 https://nuzzles.dev/fwends
