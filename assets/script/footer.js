@@ -1615,7 +1615,30 @@ window.addEventListener(`load`, () => {
       `it's no noise november everyone shut the fuck up`,
       `what the bark`,
       `we're going on an, inter-city~ 🎶`,
-      `there's a million GRUESOME ways to DIE!`
+      `there's a million GRUESOME ways to DIE!`,
+      `you sure people will pay for this?`,
+      `femboys & firearms vol. 2`,
+      `you know how some pervy furs can be..`,
+      `six years in the furry fandom`,
+      `you are correct - it is insensitive! i will not talk further on the subject.`,
+      `I'M GOING TO STAB SO MANY PUMPKINS....wait, i'm LATE??? FUCK`,
+      `I WEAR BIG HOODIES TO HIDE MY BIG DICK`,
+      `FEMTANYL MENTIONED`,
+      `don't like it? DON'T WATCH IT`,
+      `it's folfover`,
+      `we are so baaaack`,
+      `I WANT IT AS BIG AS THE GALAXY`,
+      `i'm upset what they said makes sense`,
+      `i'm pulling my programming socks all the way up for this one`,
+      `thank you for 7 years of memories, acpc 💐`,
+      `i cast UNREGISTERED FIREARM`,
+      `what do i do if i've cracked my protogen's screen`,
+      `true femboys go for the antiques`,
+      `a bunny with a party hat for parties`,
+      `WIND SHEAR, WIND SHEAR, WIND SHEAR **************** AAAAAAAAAAAAAAAAAAAAAAASDDGHJJJNGFDDDSDGGKKFNNCOCOEURFOCCOSJHWPQKDJWDJCJLSDJ`,
+      `is that illegal? guess i'll find out!`,
+      `EVERYTHING IS 3% OFF!`,
+      `your gender identity rules`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
