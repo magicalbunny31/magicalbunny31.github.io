@@ -1638,7 +1638,24 @@ window.addEventListener(`load`, () => {
       `WIND SHEAR, WIND SHEAR, WIND SHEAR **************** AAAAAAAAAAAAAAAAAAAAAAASDDGHJJJNGFDDDSDGGKKFNNCOCOEURFOCCOSJHWPQKDJWDJCJLSDJ`,
       `is that illegal? guess i'll find out!`,
       `EVERYTHING IS 3% OFF!`,
-      `your gender identity rules`
+      `your gender identity rules`,
+      `deerie says their sleigh is late AGAIN FOR THE THIRD YEAR IN A ROW`,
+      `..at least it's good quality art`,
+      `you can't stop me from poisoning my friends but you can stop me from blaming you`,
+      `SCORCH THE SUN, I'M BURNIN'`,
+      `STOP IT STOP EATING MY RAM YOU ATE IT ALL AND NOW I HAVE NONE LEFT HEY GIVE THAT RAM STICK BACK STOP IT BAD BAD BAD`,
+      `guy rolled up, asked for a butterbeer, called you gay, and left`,
+      `I CAN'T STOP WINNING! I CAN'T STOP WINNING! I CAN'T STOP WINNING! I CAN'T STOP WINNING! I CA....huh? oh, five more minutes..`,
+      `it's beginning to look a lot like kissmas`,
+      `when did we all become so risk aversed?!`,
+      `eat it and tell us what it tastes like`,
+      `❌POPUFUR❌ ✅PUPSTAR✅`,
+      `sleep is important but not more than my food`,
+      `i'll take the controversial opinion, fuck you societal norms~`,
+      `if i leak my music playlists i WILL be cancelled`,
+      `OW!!!!!! MY NON-EXISTENT TOE!!!`,
+      `wait, we're on a SLOPE! we can just use GRAVITY!!!....you probably should've moved out of the way first..`,
+      `how do i block this guy chat`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
