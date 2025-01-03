@@ -1655,7 +1655,14 @@ window.addEventListener(`load`, () => {
       `if i leak my music playlists i WILL be cancelled`,
       `OW!!!!!! MY NON-EXISTENT TOE!!!`,
       `wait, we're on a SLOPE! we can just use GRAVITY!!!....you probably should've moved out of the way first..`,
-      `how do i block this guy chat`
+      `how do i block this guy chat`,
+      `the dramafurs do NOT stop`,
+      `it's no noise november everyone shut the fuck up....what do you mean it's december?`,
+      `can you believe it guys? kissmas! just a week away!`,
+      `don't freak out but i just poisoned you and the only cure is nothing! ehahhahehh! now die.`,
+      `your honor, i was only pretending to be a brain dead moron!`,
+      `folves get fluffier during winter and i love my winter coat`,
+      `happ holidays~`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
