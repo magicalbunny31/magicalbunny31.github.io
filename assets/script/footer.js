@@ -1662,7 +1662,27 @@ window.addEventListener(`load`, () => {
       `don't freak out but i just poisoned you and the only cure is nothing! ehahhahehh! now die.`,
       `your honor, i was only pretending to be a brain dead moron!`,
       `folves get fluffier during winter and i love my winter coat`,
-      `happ holidays~`
+      `happ holidays~`,
+      `you all may hate me; i backstabbed and betrayed you all; i ruined your lives - but i did what i had to do for the greater good`,
+      `reach for the light, you might touch the sky`,
+      `see you next year~`,
+      `H4P NWE YRA 🍻`,
+      `can i be ur order:score this year`,
+      `YOU TELL ME NO STICKS IN THE HOUSE THEN YOU DRAG A WHOLE 🎄 IN???`,
+      `MY BREAD WAS BURNT TO A CRISP`,
+      `GRRRR ARF ARF AWOOOOO`,
+      `for the next episode we will be playing russian roulette in real life`,
+      `we are all a part of the grand design`,
+      `are you kidding? i saw a bright pink box at the store, of course i came running!`,
+      `they did NOT make this fursuit friendly`,
+      `another dollar in the "wish that were me" jar`,
+      `if i had a jar like that then i would probably fill it in an hour`,
+      `sorry i ate the key`,
+      `what better way to train a pet than from a pet themselves?~`,
+      `;//w//;`,
+      `wow, that was a lot of information !! ..none of which answered what it does..`,
+      `nuh uh! that's a deer!`,
+      `and..?`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
