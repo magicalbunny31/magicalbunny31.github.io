@@ -1682,7 +1682,13 @@ window.addEventListener(`load`, () => {
       `;//w//;`,
       `wow, that was a lot of information !! ..none of which answered what it does..`,
       `nuh uh! that's a deer!`,
-      `and..?`
+      `and..?`,
+      `today i'm going to see how many flights of stairs i can fall down before EXPLODING!`,
+      `NOO I MISSED THE STREAM ,, this is proof that i shouldn't be sleeping anymore`,
+      `judge a wolf by their teeth~`,
+      `don't fret, i'm a nice folf,,`,
+      `welcome to the INTERNET!!! the sole reason i haven't finished my homework yet~`,
+      `Big car not as safe. Small car still not safe, because of big car.`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
