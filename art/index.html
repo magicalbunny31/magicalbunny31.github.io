@@ -126,34 +126,16 @@
             100% { top: 49%; left: 51%; }
          }
 
-         #catling {
+         #blender-default-cube {
             position: sticky;
             z-index: 2;
          }
 
-         #catling:hover {
+         #blender-default-cube:hover {
             -webkit-animation: spin 0.125s linear infinite, scale 1s infinite;
             -moz-animation: spin 0.125s linear infinite, scale 1s infinite;
             -o-animation: spin 0.125s linear infinite, scale 1s infinite;
             animation: spin 0.125s linear infinite, scale 1s infinite;
-         }
-
-         #catling-background {
-            -webkit-animation: fade 30s linear, move 10s ease infinite;
-            -moz-animation: fade 30s linear, move 10s ease infinite;
-            -o-animation: fade 30s linear, move 10s ease infinite;
-            animation: fade 30s linear, move 10s ease infinite;
-            background-clip: padding-box;
-            display: none;
-            left: 50%;
-            position: fixed;
-            min-width: 100%;
-            min-height: 100%;
-            opacity: 75%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 102%;
-            z-index: 1;
          }
       </style>
 
@@ -214,27 +196,6 @@
             const buttonContent = document.getElementById(`${newButtonId}-content`);
             buttonContent.style.display = `block`;
          });
-
-         window.addEventListener(`load`, () => {
-            const catlingMusic = document.getElementById(`catling-music`);
-            const catlingBackground = document.getElementById(`catling-background`);
-            const catling = document.getElementById(`catling`);
-            catling.onmouseenter = _event => {
-               catlingMusic.play();
-               catlingBackground.style.display = `block`;
-            };
-            catling.onmouseleave = _event => {
-               catlingMusic.pause();
-               catlingBackground.style.display = `none`;
-            };
-         });
-
-         window.addEventListener(`load`, () => {
-            const catling = document.getElementById(`catling`);
-            const isGoldenCatling = !Math.floor(Math.random() * 100); // 1% chance of GOLDEN catling
-            if (isGoldenCatling)
-               catling.src = `/assets/what/golden_catling.webp`;
-         });
       </script>
 
 
@@ -242,12 +203,6 @@
 
 
    <body>
-
-
-      <img id="catling-background" src="/assets/art/catling.webp"></img>
-
-
-      <audio id="catling-music" src="https://files.catbox.moe/id2yf8.mp3" hidden loop preload="auto"></audio>
 
 
       <div class="centre">
@@ -683,8 +638,8 @@
                <div class="large-border box">
 
 
-                  <a href="https://catlingzone.poxi.io" target="_blank">
-                     <img id="catling" style="float: right; width: 3em" src="/assets/what/catling.png" draggable="false"/>
+                  <a href="https://twitter.com/hi_itsBlizzard" target="_blank">
+                     <img id="blender-default-cube" style="float: right; width: 3em" src="/assets/what/blender_default_cube.png" draggable="false"/>
                   </a>
 
 
