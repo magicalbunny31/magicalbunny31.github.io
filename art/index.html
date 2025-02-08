@@ -148,9 +148,9 @@
       <script>
          window.addEventListener(`load`, () => {
             const hash = window.location.hash.slice(1);
-            const buttonId = [ `2023-furry-art`, `2022-furry-art`, `2021-furry-art` ].includes(hash)
+            const buttonId = [ `2024-furry-art`, `2023-furry-art`, `2022-furry-art`, `2021-furry-art` ].includes(hash)
                ? hash
-               : `2024-furry-art`;
+               : `2025-furry-art`;
 
             const button = document.getElementById(buttonId);
             button.classList.add(`disabled`);
@@ -168,9 +168,9 @@
 
          window.addEventListener(`hashchange`, hashChangeEvent => {
             const oldHash = hashChangeEvent.oldURL.split(`#`).at(-1);
-            const oldButtonId = [ `2023-furry-art`, `2022-furry-art`, `2021-furry-art` ].includes(oldHash)
+            const oldButtonId = [ `2024-furry-art`, `2023-furry-art`, `2022-furry-art`, `2021-furry-art` ].includes(oldHash)
                ? oldHash
-               : `2024-furry-art`;
+               : `2025-furry-art`;
 
             const oldButton = document.getElementById(oldButtonId);
             oldButton.classList.remove(`disabled`);
@@ -179,9 +179,9 @@
             oldButtonText.innerHTML = `<strong>${oldButtonText.innerText}</strong>`;
 
             const newHash = hashChangeEvent.newURL.split(`#`).at(-1);
-            const newButtonId = [ `2023-furry-art`, `2022-furry-art`, `2021-furry-art` ].includes(newHash)
+            const newButtonId = [ `2024-furry-art`, `2023-furry-art`, `2022-furry-art`, `2021-furry-art` ].includes(newHash)
                ? newHash
-               : `2024-furry-art`;
+               : `2025-furry-art`;
 
             const newButton = document.getElementById(newButtonId);
             newButton.classList.add(`disabled`);
@@ -267,6 +267,14 @@
 
                         <div class="tab-heading">
                            <div class="corner-border tab-item">
+                              <a class="border button" id="2025-furry-art" href="#2025-furry-art" style="--disabled-colour: #808080;" draggable="false">
+                                 <img class="emoji" src="/assets/emoji/mutant_standard/calendar_spiral.webp" alt="calendar spiral" title=":calendar_spiral:" draggable="false"/>
+                                 <div>
+                                    <strong>2025</strong>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="corner-border tab-item">
                               <a class="border button" id="2024-furry-art" href="#2024-furry-art" style="--disabled-colour: #808080;" draggable="false">
                                  <img class="emoji" src="/assets/emoji/mutant_standard/calendar_spiral.webp" alt="calendar spiral" title=":calendar_spiral:" draggable="false"/>
                                  <div>
@@ -305,6 +313,21 @@
                      <hr/>
 
                      <div class="tab-content">
+
+                        <div class="content" id="2025-furry-art-content">
+
+                           <div class="row">
+                              <div class="column">
+                                 <div class="media-corner-border">
+                                    <a href="https://bsky.app/profile/magicalbunny31.nuzzles.dev/post/3lhp5vzm3m22i" target="_blank">
+                                       <img class="border" src="/assets/art/sharkace.webp" alt="a grey shark with blue and pink heterochromia eyes wearing a distinctive outfit including a fish-print collared crop top, tan shoulder bag, black skirt with light-coloured sparkles, a purple collar, ski goggles, and a mini crown. they are striking a pose at the viewer with sparkles." title="sharkace 🦈" draggable="false" loading="lazy"/>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="column"></div>
+                           </div>
+
+                        </div>
 
                         <div class="content" id="2024-furry-art-content">
 
