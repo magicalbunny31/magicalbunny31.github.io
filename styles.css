@@ -160,7 +160,7 @@ time:hover .popup {
    width: max-content;
 }
 
-.corner-border:has(> .button:hover), .corner-border:has(> .large-button:hover), .media-corner-border:has(> a:hover) {
+.corner-border:has(> .button:hover), .corner-border:has(> .large-button:hover:not(#email)), .media-corner-border:has(> a:hover) {
    scale: 110%;
    filter: brightness(90%);
 }
