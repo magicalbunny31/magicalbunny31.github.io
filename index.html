@@ -266,9 +266,16 @@
                            <a class="border large-button more-socials" id="email" draggable="false" style="display: block;">
                               <div class="cf-turnstile" id="turnstile-container" data-sitekey="0x4AAAAAABDamXt2zkbpYqTJ" data-callback="turnstileCallback" data-size="flexible"></div>
                               <script>
+                                 /**
+                                  * this script executes before the page finishes loading,
+                                  * so the sizes from fonts and whatnot won't have time to load before button.offsetWidth is calculated,
+                                  * which is normally larger than expected
+                                  * to fix this, instead of using 300px (as stated in the turnstile widget's max flexible length)
+                                  * i'll just use a higher value
+                                  */
                                  const [ button ] = document.getElementsByClassName(`large-button`);
-                                 const turnstileContainer = document.getElementById(`turnstile-container`);
-                                 if (button.offsetWidth < 300)
+                                 const turnstileContainer = document.getElementById(`turnstile-container`);console.log(`zzz${button.offsetWidth}`)
+                                 if (button.offsetWidth < 375)
                                     turnstileContainer.setAttribute(`data-size`, `compact`);
                               </script>
                               <img class="emoji hidden-for-email-turnstile" src="/assets/emoji/mutant_standard/envelope.webp" alt="envelope" title=":envelope:" draggable="false"/>
