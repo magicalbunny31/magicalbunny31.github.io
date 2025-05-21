@@ -26,6 +26,18 @@
 
       <link rel="stylesheet" type="text/css" href="/styles.css"/>
       <style>
+         .row {
+            display: flex;
+            gap: 0.2em;
+         }
+
+         .column {
+            display: flex;
+            flex-direction: column;
+            flex: 25%;
+            gap: 0.2em;
+         }
+
          @media only screen and (max-width: 750px) {
             #banner-border {
                margin-top: 1em !important;
@@ -84,167 +96,186 @@
                         Overview
                      </h2>
                      <p>
-                        you're probably wondering how i'm maintaining all of my discord apps, right?
+                        managing and maintaining so many discord apps is a lot of work!
                         <br/>
                         <br/>
-                        well....i'm not: fennec 💻 is!
+                        being the lazy bean that i am, i decided to create fennec 💻: a conglomerate of different projects that provides a drop-in cross-project standardisation to help with logging and monitoring of all of my apps!
                         <br/>
                         <br/>
-                        fennec 💻 provides me with utilities to mass-manage, monitor, and other kewl helper functions that, well, helps me with development~
+                        wonder what makes up fennec 💻 and how i include those tools in my workflows? keep on reason~
                      </p>
 
                      <h3>
-                        ❓ some background information
+                        🗃️ the different components of fennec
                      </h3>
                      <ul>
-                        <li>fennec 💻 originally started as a small in-discord dashboard for me to view information about all my apps because i was too lazy to log-in to my servers hosting these apps</li>
                         <li>
-                           as i developed more, i realised how useful this could be if i gave fennec 💻
-                           <em>more</em>
-                           tasks....leading to where we are today with its usage as an app-for-all-apps helper~
+                           <a href="https://www.cloudflare.com" target="_blank"><img class="emoji" src="/assets/logo/cloudflare.png" alt="cloudflare logo" title="cloudflare" draggable="false"/> Cloudflare</a>:
+                           <a href="https://developers.cloudflare.com/workers" target="_blank"><img class="emoji" src="/assets/logo/workers_and_pages.png" alt="cloudflare workers & pages logo" title="cloudflare workers & pages" draggable="false"/> Workers</a>
+                           using
+                           <a href="https://itty.dev/itty-router/" target="_blank"><img class="emoji" src="/assets/logo/itty.png" alt="itty logo" title="itty" draggable="false"/> <code>itty-router</code></a>
                         </li>
+                        <ul>
+                           <li>
+                              named
+                              <code>fennec-utilities</code>,
+                              this is a serverless RESTful API that works together with the
+                              <a href="/dev/fennec/utilities" target="_blank"><img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/> <code>@magicalbunny31/fennec-utilities</code></a>
+                              package (see below) which interfaces with the
+                              <a href="https://discord.com/developers/docs/intro" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> Discord API</a>
+                              and
+                              <a href="https://cloud.google.com" target="_blank"><img class="emoji" src="/assets/logo/google_cloud.png" alt="google cloud logo" title="google cloud" draggable="false"/> Google Cloud</a>:
+                              <a href="https://cloud.google.com/firestore" target="_blank"><img class="emoji" src="/assets/logo/firestore.png" alt="google cloud firestore logo" title="google cloud firestore" draggable="false"/> Firestore</a>
+                              APIs
+                           </li>
+                        </ul>
+                        <li>
+                           <a href="/dev/fennec/utilities" target="_blank"><img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/> <code>@magicalbunny31/fennec-utilities</code></a>
+                        </li>
+                        <ul>
+                           <li>
+                              this is a github package developed as an API wrapper for
+                              <code>fennec-utilities</code>
+                              (see above)
+                           </li>
+                           <li>it helps with displaying logs to developers via fennec 💻 and also displaying announcements, managing blacklists, and marking apps as offline for maintenance to users</li>
+                        </ul>
+                        <li>
+                           fennec 💻 discord app and fennec websockets
+                        </li>
+                        <ul>
+                           <li>
+                              each of my physical and cloud servers (which run my apps) are named
+                              <code>fox-x</code>
+                              and
+                              <code>wolf-x</code>
+                           </li>
+                           <ul>
+                              <li>
+                                 servers prefixed with
+                                 <code>fox-</code>
+                                 are my own physical servers (running using various
+                                 <a href="https://www.raspberrypi.com/products/" target="_blank"><img class="emoji" src="/assets/logo/raspberry_pi.png" alt="raspberry pi logo" title="raspberry pi" draggable="false"/> Raspberry Pi</a>
+                                 boards) and have a 0-based index which defines the order in which i got the server in
+                              </li>
+                              <ul>
+                                 <li>
+                                    for example,
+                                    <code>fox-0</code>
+                                    represents my oldest server,
+                                    <code>fox-1</code>
+                                    represents my second oldest server, and so on..
+                                 </li>
+                              </ul>
+                              <li>
+                                 servers prefixed with
+                                 <code>wolf-0</code>
+                                 are my own cloud servers (running on various platforms, such as
+                                 <a href="https://cloud.google.com" target="_blank"><img class="emoji" src="/assets/logo/google_cloud.png" alt="google cloud logo" title="google cloud" draggable="false"/> Google Cloud</a>:
+                                 <a href="https://cloud.google.com/compute" target="_blank"><img class="emoji" src="/assets/logo/compute_engine.png" alt="google cloud compute engine logo" title="google cloud compute engine" draggable="false"/> Compute Engine</a>)
+                                 and have a 0-based index which defines the order in which i got the server in
+                              </li>
+                              <ul>
+                                 <li>
+                                    for example,
+                                    <code>wolf-0</code>
+                                    represents my oldest server (and currently my only offside cloud server too)
+                                 </li>
+                              </ul>
+                           </ul>
+                           <li>
+                              fennec 💻 runs on all
+                              <code>fox-x</code>
+                              and
+                              <code>wolf-x</code>
+                              servers
+                           </li>
+                           <ul>
+                              <li>
+                                 the main fennec 💻 instance runs on
+                                 <code>wolf-0</code>,
+                                 a server that persistently kept online, and provides the hosting for the fennec 💻 and as well as an authenticated websocket server
+                              </li>
+                              <li>
+                                 all other fennec 💻 instances (on all
+                                 <code>fox-x</code>
+                                 and all
+                                 <code>wolf-x</code>
+                                 servers, including
+                                 <code>wolf-0</code>
+                                 for simplicity's sake)
+                                 are websocket clients to the websocket server to
+                                 <code>wolf-0</code>
+                              </li>
+                              <li>
+                                 the main fennec 💻 instance on
+                                 <code>wolf-0</code>
+                                 provides the interface (via
+                                 <a href="https://discord.com" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> Discord</a>)
+                                 and sends requests to other fennec 💻 instances connected to the websocket to provide tools to help monitor apps running on the respective server
+                              </li>
+                              <li>
+                                 for example, the main fennec 💻 instance may issue commands to a specific server, such as
+                                 <code>fox-0</code>,
+                                 to perform functions like restarting a specific app, viewing its console's logs, monitoring its resources, and even restarting the server itself
+                              </li>
+                              <li>
+                                 having such commands baked into fennec 💻 helps my workflow by automating tasks, allowing access to my servers outside my home network (don't worry, i also use
+                                 <a href="https://tailscale.com" target="_blank"><img class="emoji" src="/assets/logo/tailscale.png" alt="tailscale logo" title="tailscale" draggable="false"/> Tailscale</a>
+                                 to provide a vpn connection~), and doing other tedious tasks that would save me from having to login with ssh
+                              </li>
+                           </ul>
+                        </ul>
                      </ul>
 
-                     <h3>
-                        🗃️ the different types of fennec
-                     </h3>
-                     <ul>
-                        <li>
-                           <code>fennec</code>,
-                           <code>fennec_uwu-projects</code>,
-                           and
-                           <code>fennec_other-stuffs</code>
-                        </li>
-                        <ul>
-                           <li>
-                              fennec 💻 is split into different
-                              <a href="https://discord.com/developers/docs/events/gateway#sharding" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> shards</a>,
-                              with each process running on its correlating server
-                           </li>
-                           <li>for context, i currently group my servers under these two names:</li>
-                           <ul>
-                              <li>
-                                 <code>uwu-projects</code>
-                                 apps and projects that i personally develop, which includes:
-                              </li>
-                              <ul>
-                                 <li>
-                                    <a href="/dev/fox-bot"><img class="emoji circle-border" src="/assets/avatar/fox_bot.webp" alt="fox bot's avatar" title="fox bot" draggable="false"/> fox bot 🦊</a>
-                                    ✨
-                                 </li>
-                                 <li>
-                                    <a href="/dev/bun"><img class="emoji circle-border" src="/assets/avatar/bun.webp" alt="bun's avatar" title="bun" draggable="false"/> bun 🐰</a>
-                                    ✨
-                                 </li>
-                                 <li>
-                                    <a href="/dev/fox-kit"><img class="emoji circle-border" src="/assets/avatar/fox_kit.webp" alt="fox kit's avatar" title="fox kit" draggable="false"/> fox kit 🐾</a>
-                                 </li>
-                                 <li>fennec 💻</li>
-                                 <li>kettu 🐺</li>
-                              </ul>
-                              <li>
-                                 <code>other-stuffs</code>
-                                 apps and projects that i develop for other people and servers, which includes:
-                              </li>
-                              <ul>
-                                 <li>
-                                    <a href="/dev/berry-bot"><img class="emoji circle-border" src="/assets/avatar/berry_bot.webp" alt="berry bot's avatar" title="berry bot" draggable="false"/> berry bot 🫐</a>
-                                 </li>
-                                 <li>
-                                    <a href="/dev/flooded-area-bot"><img class="emoji circle-border" src="/assets/avatar/flooded_area_bot.webp" alt="flooded area bot's avatar" title="flooded area bot" draggable="false"/> flooded area bot 🌊</a>
-                                 </li>
-                                 <li>
-                                    <a href="/dev/flooded-area-moderation"><img class="emoji circle-border" src="/assets/avatar/flooded_area_moderation.webp" alt="the killer's avatar" title="the killer" draggable="false"/> the killer 🤖</a>
-                                 </li>
-                                 <li>
-                                    <a href="/dev/halowo-levels"><img class="emoji circle-border" src="/assets/avatar/greg.webp" alt="greg.'s avatar" title="greg." draggable="false"/> greg. 🦎</a>
-                                 </li>
-                                 <li>
-                                    <a href="/dev/mintbubblex"><img class="emoji circle-border" src="/assets/avatar/mintbubblex.webp" alt="MintBubblex's avatar" title="MintBubblex" draggable="false"/> MintBubblex 🍭</a>
-                                 </li>
-                                 <li>
-                                    <a href="/dev/friends-smp/app"><img class="emoji circle-border" src="/assets/avatar/friends_smp_app.webp" alt="friends' smp app's avatar" title="friends' smp app" draggable="false"/> friends' smp app 🐱</a>
-                                 </li>
-                              </ul>
-                           </ul>
-                           <li>
-                              you may have noticed that there's another lone
-                              <code>fennec</code>
-                              name: that's because this process also runs on an external server!
-                           </li>
-                           <ul>
-                              <li>
-                                 i guess you could say this
-                                 <em>kinda</em>
-                                 ensures there's at least one fennec 💻 process online
-                              </li>
-                              <li>
-                                 having three processes also correlates with the amount of discord servers i own: three! not that that matters anyway: with user-installable apps,
-                                 <a href="https://discord.com/developers/docs/events/gateway#sharding-sharding-formula" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> all interactions from different channels are sent to the correct fennec shard/process</a>
-                                 anyway..
-                              </li>
-                           </ul>
-                           <li>
-                              these fennec 💻 processes also allow me to interface with my process manager straight from
-                              <a href="https://discord.com" target="_blank"><img class="emoji" src="/assets/logo/discord.png" alt="discord logo" title="discord" draggable="false"/> discord</a>!
-                              it just makes my life easier knowing that i don't need to ssh into my servers every time~
-                           </li>
-                        </ul>
-                        <li>
-                           <code>fennec-utilities</code>
-                        </li>
-                        <ul>
-                           <li>
-                              this is a RESTful API
-                              <a href="/dev/fennec/utilities" target="_blank"><img class="emoji" src="/assets/logo/github.png" alt="github logo" title="github" draggable="false"/> with a package included</a>
-                              that all apps use to interact with fennec 💻
-                           </li>
-                           <li>
-                              data that can be managed via
-                              <code>fennec-utilities</code>
-                              includes:
-                           </li>
-                           <ul>
-                              <li>managing the global blacklist, which has the ability to block interactions from specific users</li>
-                              <li>marking apps as offline, blocking interactions to all users except developers</li>
-                              <li>monitoring if apps are online</li>
-                              <li>setting up announcements for each app</li>
-                              <li>handling errors on the front-and-back-end</li>
-                           </ul>
-                        </ul>
-                        <li>
-                           <code>fennec-websocket</code>
-                        </li>
-                        <ul>
-                           <li>
-                              the different kinds of fennec 💻 processes needs to interact with one another, so i have created
-                              <code>fennec-websocket</code>
-                              for this purpose!
-                           </li>
-                           <ul>
-                              <li>each fennec 💻 process connects to the websocket server and can send/receive data sent from other fennec 💻 process also listening on the websocket server</li>
-                           </ul>
-                           <li>..why?</li>
-                              <ul>
-                                 <li>
-                                    well, what if i wanted to run some code on
-                                    <code>uwu-project</code>'s
-                                    server, however the guild/channel that i sent the command from was sent to
-                                    <code>fennec_other-stuffs</code>'s
-                                    shard?
-                                 </li>
-                                 <li>
-                                    instead of forcing myself to switch guilds/channels that contains the shard
-                                    <code>fennec_uwu-projects</code>
-                                    is handling, i can send data over
-                                    <code>fennec-websocket</code>
-                                    directly to
-                                    <code>fennec_uwu-projects</code>
-                                    so that that fennec 💻 process can evaluate the code!
-                                 </li>
-                              </ul>
-                        </ul>
-                     </ul>
+                  </div>
+               </div>
+
+
+               <div class="large-corner-border">
+                  <div class="large-border box">
+
+                     <h2>
+                        <img class="emoji" src="/assets/emoji/mutant_standard/national_park.webp" alt="national park" title=":national_park:" draggable="false"/>
+                        images
+                     </h2>
+
+                     <div class="row">
+                        <div class="column">
+                           <div class="media-corner-border">
+                              <a href="/assets/discord/app-images/fennec/blacklist.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fennec/blacklist.png" alt="" title="" draggable="false" loading="lazy"/>
+                              </a>
+                           </div>
+                           <div class="media-corner-border">
+                              <a href="/assets/discord/app-images/fennec/offline.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fennec/offline.png" alt="" title="" draggable="false" loading="lazy"/>
+                              </a>
+                           </div>
+                           <div class="media-corner-border">
+                              <a href="/assets/discord/app-images/fennec/evaluate.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fennec/evaluate.png" alt="" title="" draggable="false" loading="lazy"/>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="column">
+                           <div class="media-corner-border">
+                              <a href="/assets/discord/app-images/fennec/announcement.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fennec/announcement.png" alt="" title="" draggable="false" loading="lazy"/>
+                              </a>
+                           </div>
+                           <div class="media-corner-border">
+                              <a href="/assets/discord/app-images/fennec/pm2-list.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fennec/pm2-list.png" alt="" title="" draggable="false" loading="lazy"/>
+                              </a>
+                           </div>
+                           <div class="media-corner-border">
+                              <a href="/assets/discord/app-images/fennec/error.png" target="_blank">
+                                 <img class="border" src="/assets/discord/app-images/fennec/error.png" alt="" title="" draggable="false" loading="lazy"/>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
 
                   </div>
                </div>
