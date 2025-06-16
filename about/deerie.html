@@ -151,6 +151,16 @@
                boykisserMusic.play();
             };
          });
+
+         window.addEventListener(`load`, () => {
+            const rubypawbs = document.getElementById(`rubypawbs`);
+
+            rubypawbs.onmouseenter = async () => {
+               const boykisser = document.getElementsByClassName(`boykisser`);
+               for (const element of boykisser)
+                  element.src = `/assets/what/rubypawbs.webp`;
+            };
+         });
       </script>
 
 
@@ -363,6 +373,10 @@
 
             <div class="large-corner-border">
                <div class="large-border box">
+
+                  <a href="https://bsky.app/profile/rubypawbs.bsky.social" target="_blank">
+                     <img id="rubypawbs" style="bottom: 0; margin: 0 1em 1em 0; position: absolute; right: 0; width: 2em;" src="/assets/what/rubypawbs.webp" alt="yellow dragon with atop hat sticking its tongue out" title="rubypawbs" draggable="false"/>
+                  </a>
 
                   <div class="blinkie-group">
                      <a href="https://www.tumblr.com/blinky-wings/694703477477212160/rainbow-pronoun-blinkies" title="he/him" target="_blank">
