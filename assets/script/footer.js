@@ -1759,7 +1759,22 @@ window.addEventListener(`load`, () => {
       `well GUESS WHAT. the POLLEN CAME BACK`,
       `why does it smell like chloroform in here`,
       `I'M GOING FERAL`,
-      `MEWLZEBUB IS UPON US ALL`
+      `MEWLZEBUB IS UPON US ALL`,
+      `5 stars, turned me into a furry, can't undo, good soda though`,
+      `I SWEAR :3 IS TAKING OVER I DON'T EVEN KNOW WHAT IT'S SUPPOSED TO DO BUT IT'S INFECTED MY BRAIN I DON'T TRUST IT STOP TYPING :3`,
+      `you're lying. i see your tail wagging`,
+      `the trains are shit, everyone knows they're shit, we can't do anything about it so we just complain`,
+      `GET OUT OF MY SHOP`,
+      `my ambition in life is to be the first person to step on the sun`,
+      `where is "THE" usb port ?? i have multiple !! do you think i'm a phone or something?`,
+      `you'll NEVER see my usb ports >:3`,
+      `happ volunteers' week!`,
+      `my life goal is to fly around the world and get free breakfast`,
+      `DON'T TOUCH MY PIZZA`,
+      `go on. meow.`,
+      `just realised we lowkey stupid as fuck`,
+      `does it make any more sense at a 45 degree angle?`,
+      `without us furries there would be no tech industry and no aviation industry`
    ];
 
    const [ text ] = texts.sort(() => .5 - Math.random());
