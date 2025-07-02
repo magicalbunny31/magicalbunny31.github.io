@@ -1774,10 +1774,7 @@ window.addEventListener(`load`, () => {
       `go on. meow.`,
       `just realised we lowkey stupid as fuck`,
       `does it make any more sense at a 45 degree angle?`,
-      `without us furries there would be no tech industry and no aviation industry`
-   ];
-
-   const [ text ] = texts.sort(() => .5 - Math.random());
+   const text = texts[Math.floor(Math.random() * sounds.length)];
 
    const splash = document.getElementById(`splash`);
    splash.innerText = text;
