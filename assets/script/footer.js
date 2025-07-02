@@ -1774,6 +1774,19 @@ window.addEventListener(`load`, () => {
       `go on. meow.`,
       `just realised we lowkey stupid as fuck`,
       `does it make any more sense at a 45 degree angle?`,
+      `without us furries there would be no tech industry and no aviation industry`,
+      `built on praise`,
+      `then there's no way someone else could repeat what you did to me`,
+      `OI MATE! I'M AN AUSTRALIAN EXTREMIST! AND I'VE COME TO DETONATE THIS BOMB THAT WILL RELEASE ALL THE WORLD'S DEADLIEST SPIDERS IN`,
+      `oh, i ordered that! but....i don't have any m-money..~`,
+      `turning small problems into big problems ✨`,
+      `THE SEAGULL HAS A VAPE`,
+      `attention all members of the discord server: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`,
+      `https://www.saveafox.org`,
+      `we're all gay somewhere`,
+      `paw obsessed`
+   ];
+
    const text = texts[Math.floor(Math.random() * texts.length)];
 
    const splash = document.getElementById(`splash`);
