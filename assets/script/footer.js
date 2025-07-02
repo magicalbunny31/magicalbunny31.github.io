@@ -1774,7 +1774,7 @@ window.addEventListener(`load`, () => {
       `go on. meow.`,
       `just realised we lowkey stupid as fuck`,
       `does it make any more sense at a 45 degree angle?`,
-   const text = texts[Math.floor(Math.random() * sounds.length)];
+   const text = texts[Math.floor(Math.random() * texts.length)];
 
    const splash = document.getElementById(`splash`);
    splash.innerText = text;
