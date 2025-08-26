@@ -134,6 +134,34 @@
             display: none;
          }
 
+         #magicalbunny31-button {
+            justify-content: center;
+            column-gap: 0.5em;
+            row-gap: 0.5em;
+            padding-bottom: 0.5em;
+         }
+
+         #magicalbunny31-button-popup {
+            bottom: unset;
+            margin: -1.5em 0 !important;
+            transition: opacity 0.25s ease-in-out;
+            opacity: 0;
+            display: inline !important;
+            visibility: visible !important;
+         }
+         
+         *:hover > .popup#magicalbunny31-button-popup {
+            display: unset !important;
+            visibility: unset !important;
+         }
+
+         #magicalbunny31-button-textarea {
+            font-family: "Ubuntu Mono";
+            font-size: 0.5em;
+            resize: none;
+            width: 25.5em;
+         }
+
          .blinkie-group {
             display: flex;
             flex-wrap: wrap;
@@ -144,6 +172,7 @@
          }
 
          .blinkie {
+            image-rendering: pixelated;
             width: max-content;
          }
 
@@ -235,6 +264,19 @@
                   div.style.display = `none`;
             };
          });
+
+         window.addEventListener(`load`, () => {
+            const textarea = document.getElementById(`magicalbunny31-button-textarea`);
+            const popup = document.getElementById(`magicalbunny31-button-popup`)
+            textarea.addEventListener(`click`, () => {
+               textarea.select();
+               document.execCommand(`copy`);
+               popup.style.opacity = `1`;
+               setTimeout(() => {
+                  popup.style.opacity = `0`;
+               }, 1500);
+            });
+         })
       </script>
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -261,9 +303,6 @@
                      <div class="media-corner-border">
                         <img class="border thumbnail" src="/assets/avatar/side_folfo.webp" alt="magicalbunny31's avatar" title="just a bit eepy 💤" draggable="false"/>
                      </div>
-                     <a href="/" title="mb31" style="float: right; clear: right; margin-top: 1em !important;">
-                        <img class="blinkie" src="/assets/blinkie/mb31.gif" alt="mb31" title="mb31" draggable="false"/>
-                     </a>
 
                      <h1>
                         <img class="emoji" src="/assets/emoji/mutant_standard/bun_paw_wave.webp" alt="waving paw" title=":bun_paw_wave:" draggable="false"/>
@@ -665,6 +704,16 @@
                   <a href="/fwends">
                      <img style="bottom: 0; margin: 0 1em 1em 0; position: absolute; right: 0; width: 2em;" src="/assets/emoji/mutant_standard/revolving_hearts.webp" alt="revolving hearts" title=":revolving_hearts:" draggable="false"/>
                   </a>
+
+                  <div class="blinkie-group" id="magicalbunny31-button">
+                     <a href="/" title="mb31">
+                        <img class="blinkie" src="/assets/blinkie/mb31.gif" alt="mb31" title="mb31" draggable="false"/>
+                     </a>
+                     <span>
+                        <span class="popup" id="magicalbunny31-button-popup">copied to your clipboard :3</span>
+                        <textarea readonly id="magicalbunny31-button-textarea">&lt;a href="https://nuzzles.dev/"&gt;&lt;img src="https://nuzzles.dev/assets/blinkie/mb31.gif"&gt;&lt;/a&gt;</textarea>
+                     </span>
+                  </div>
 
                   <div class="blinkie-group">
                      <a href="https://www.tumblr.com/blinky-wings/694703477477212160/rainbow-pronoun-blinkies" title="they/they" target="_blank">

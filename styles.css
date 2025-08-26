@@ -143,7 +143,7 @@ time {
    position: relative;
 }
 
-time .popup {
+* > .popup {
    background-color: #e6e6e6;
    border: 1px solid hsla(0, 0%, 0%, 0.10);
    border-radius: 4px;
@@ -155,7 +155,7 @@ time .popup {
    visibility: hidden;
 }
 
-time:hover .popup {
+*:hover > .popup:not(#magicalbunny31-button-popup) {
    display: inline;
    visibility: visible;
    width: max-content;
